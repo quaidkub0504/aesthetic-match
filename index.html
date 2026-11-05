@@ -4,405 +4,474 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Aesthetic Match — a concept for a patient-to-provider matching platform in medical aesthetics. Start with your concerns, not the procedure. A product concept by Alteva Digital.">
-<meta property="og:title" content="Aesthetic Match — concept by Alteva Digital">
-<meta property="og:description" content="Find the right qualified aesthetic provider before you know which treatment to ask for.">
+<meta name="description" content="Aesthetic Match connects people to qualified medical-aesthetics providers by their concerns — not by guessing which procedure to search for. Concern-first discovery, suitability-based matching, clinician-led care. A concept by Alteva Digital.">
+<meta name="keywords" content="medical aesthetics, provider matching, Botox alternative search, injector near me, skin concerns, aesthetic consultation, Howell Michigan aesthetics">
+<meta property="og:title" content="Aesthetic Match — find the right aesthetic provider, by concern">
+<meta property="og:description" content="Describe what bothers you. Meet qualified, credential-verified providers who fit. The clinician decides what's appropriate — never an algorithm.">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Aesthetic Match">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F5EFEA" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#171214" media="(prefers-color-scheme: dark)">
-<title>Aesthetic Match — a concept by Alteva Digital</title>
+<meta name="theme-color" content="#140F11" media="(prefers-color-scheme: dark)">
+<title>Aesthetic Match — the right provider, found by concern</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Aesthetic Match","applicationCategory":"HealthApplication","operatingSystem":"Web","description":"A patient-to-provider matching platform for medical aesthetics. Start with your concerns; discover qualified, credential-verified providers who fit.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free for patients"},"creator":{"@type":"Organization","name":"Alteva Digital","url":"https://altevadigital.com"}}
+</script>
 
 <style>
+/* ============================================================
+   AESTHETIC MATCH — concept platform site · Alteva Digital
+   Brand: clinical warmth. Plum + antique gold on porcelain / plum-black.
+   Type: Fraunces (display) · Hanken Grotesk (body) · IBM Plex Mono (data)
+   ============================================================ */
 :root{
   color-scheme: light;
-  /* ground + ink (chosen warm neutrals, rose/plum bias) */
-  --porcelain:#F5EFEA;
-  --paper:#FBF7F3;
-  --card:#FFFFFF;
-  --ink:#241E22;
-  --muted:#796B67;
-  --faint:#9A8C87;
-  --line:rgba(36,30,34,.12);
-  --line-soft:rgba(36,30,34,.07);
-  /* brand */
-  --plum:#6E3D52;
-  --plum-deep:#4E2A3A;
-  --rose:#A85A5E;
-  --blush:#EADBD6;
-  --blush-2:#F0E4DE;
-  --gold:#BC8A3E;
-  --gold-soft:#E7D4AF;
-  --sage:#5C7A66;          /* "match" semantic — distinct from accent */
-  --sage-soft:#DEE7DD;
-  --grad:linear-gradient(135deg,#6E3D52 0%,#8A4858 48%,#A85A5E 100%);
-  --grad-soft:linear-gradient(135deg,#EADBD6 0%,#F0E4DE 100%);
-  --shadow-sm:0 2px 10px -6px rgba(36,30,34,.28);
-  --shadow-md:0 18px 44px -26px rgba(78,42,58,.40);
-  --shadow-lg:0 40px 90px -46px rgba(78,42,58,.55);
-  --glass:rgba(251,247,243,.72);
-  --glass-line:rgba(255,255,255,.75);
-  /* type */
+  --porcelain:#F5EFEA; --paper:#FBF7F3; --card:#FFFFFF; --card-2:#FAF4EF;
+  --ink:#231D21; --muted:#786A66; --faint:#9D8F8A;
+  --line:rgba(35,29,33,.12); --line-soft:rgba(35,29,33,.06);
+  --plum:#6E3D52; --plum-deep:#4C293A; --plum-bright:#8A4860; --rose:#B35F63;
+  --blush:#EBDBD6; --blush-2:#F2E7E1; --sand:#EFE2CF;
+  --gold:#BB8A3C; --gold-soft:#E8D4AA; --gold-ink:#8A6422;
+  --sage:#5C7A66; --sage-soft:#DCE6DC;
+  --grad:linear-gradient(135deg,#6E3D52 0%,#8A4860 46%,#B35F63 100%);
+  --grad-rev:linear-gradient(135deg,#B35F63 0%,#6E3D52 100%);
+  --grad-soft:linear-gradient(135deg,#EBDBD6 0%,#F2E7E1 60%,#EFE2CF 100%);
+  --aura:radial-gradient(60% 60% at 50% 40%,rgba(179,95,99,.55),rgba(110,61,82,.30) 45%,transparent 72%);
+  --shadow-xs:0 1px 2px rgba(35,29,33,.06);
+  --shadow-sm:0 4px 16px -8px rgba(35,29,33,.28);
+  --shadow-md:0 20px 48px -28px rgba(76,41,58,.42);
+  --shadow-lg:0 44px 100px -48px rgba(76,41,58,.55);
+  --glass:rgba(251,247,243,.74); --glass-brd:rgba(255,255,255,.7);
   --f-display:"Fraunces", Georgia, "Times New Roman", serif;
   --f-body:"Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
-  --max:1200px;
-  --r:18px;
+  --max:1240px; --r:18px; --r-lg:26px;
 }
 @media (prefers-color-scheme: dark){
-  :root{
+  :root:not([data-theme]){
     color-scheme: dark;
-    --porcelain:#171214;
-    --paper:#1C1619;
-    --card:#241C20;
-    --ink:#F2E9E6;
-    --muted:#B6A6A2;
-    --faint:#8E7E7A;
-    --line:rgba(242,233,230,.14);
-    --line-soft:rgba(242,233,230,.08);
-    --plum:#C98BA2;
-    --plum-deep:#E0B4C4;
-    --rose:#D98C8A;
-    --blush:#2E2026;
-    --blush-2:#271C21;
-    --gold:#D8AC5E;
-    --gold-soft:#4A3A22;
-    --sage:#8FB199;
-    --sage-soft:#243029;
-    --grad:linear-gradient(135deg,#C98BA2 0%,#D98C8A 100%);
-    --grad-soft:linear-gradient(135deg,#2E2026 0%,#271C21 100%);
-    --shadow-sm:0 2px 10px -6px rgba(0,0,0,.6);
-    --shadow-md:0 18px 44px -24px rgba(0,0,0,.7);
-    --shadow-lg:0 40px 90px -44px rgba(0,0,0,.8);
-    --glass:rgba(28,22,25,.72);
-    --glass-line:rgba(242,233,230,.10);
+    --porcelain:#140F11; --paper:#191316; --card:#211A1E; --card-2:#1C1619;
+    --ink:#F3EAE7; --muted:#B7A7A3; --faint:#8C7C78;
+    --line:rgba(243,234,231,.14); --line-soft:rgba(243,234,231,.07);
+    --plum:#D193A8; --plum-deep:#E6BCCB; --plum-bright:#E09CAE; --rose:#E29391;
+    --blush:#2D1F25; --blush-2:#261B20; --sand:#2A2117;
+    --gold:#D7AB5C; --gold-soft:#463720; --gold-ink:#E6C27E;
+    --sage:#90B29A; --sage-soft:#223029;
+    --grad:linear-gradient(135deg,#D193A8 0%,#E29391 100%);
+    --grad-rev:linear-gradient(135deg,#E29391 0%,#D193A8 100%);
+    --grad-soft:linear-gradient(135deg,#2D1F25 0%,#261B20 60%,#2A2117 100%);
+    --aura:radial-gradient(60% 60% at 50% 40%,rgba(226,147,145,.40),rgba(209,147,168,.22) 45%,transparent 72%);
+    --shadow-sm:0 4px 16px -8px rgba(0,0,0,.6);
+    --shadow-md:0 20px 48px -26px rgba(0,0,0,.72);
+    --shadow-lg:0 44px 100px -46px rgba(0,0,0,.8);
+    --glass:rgba(25,19,22,.74); --glass-brd:rgba(243,234,231,.1);
   }
 }
-/* Explicit toggle overrides the OS media query, both directions */
 :root[data-theme="light"]{
   color-scheme: light;
-  --porcelain:#F5EFEA;--paper:#FBF7F3;--card:#FFFFFF;--ink:#241E22;--muted:#796B67;--faint:#9A8C87;
-  --line:rgba(36,30,34,.12);--line-soft:rgba(36,30,34,.07);
-  --plum:#6E3D52;--plum-deep:#4E2A3A;--rose:#A85A5E;--blush:#EADBD6;--blush-2:#F0E4DE;
-  --gold:#BC8A3E;--gold-soft:#E7D4AF;--sage:#5C7A66;--sage-soft:#DEE7DD;
-  --grad:linear-gradient(135deg,#6E3D52 0%,#8A4858 48%,#A85A5E 100%);
-  --grad-soft:linear-gradient(135deg,#EADBD6 0%,#F0E4DE 100%);
-  --shadow-sm:0 2px 10px -6px rgba(36,30,34,.28);--shadow-md:0 18px 44px -26px rgba(78,42,58,.40);--shadow-lg:0 40px 90px -46px rgba(78,42,58,.55);
-  --glass:rgba(251,247,243,.72);--glass-line:rgba(255,255,255,.75);
+  --porcelain:#F5EFEA;--paper:#FBF7F3;--card:#FFFFFF;--card-2:#FAF4EF;--ink:#231D21;--muted:#786A66;--faint:#9D8F8A;
+  --line:rgba(35,29,33,.12);--line-soft:rgba(35,29,33,.06);
+  --plum:#6E3D52;--plum-deep:#4C293A;--plum-bright:#8A4860;--rose:#B35F63;--blush:#EBDBD6;--blush-2:#F2E7E1;--sand:#EFE2CF;
+  --gold:#BB8A3C;--gold-soft:#E8D4AA;--gold-ink:#8A6422;--sage:#5C7A66;--sage-soft:#DCE6DC;
+  --grad:linear-gradient(135deg,#6E3D52 0%,#8A4860 46%,#B35F63 100%);--grad-rev:linear-gradient(135deg,#B35F63 0%,#6E3D52 100%);
+  --grad-soft:linear-gradient(135deg,#EBDBD6 0%,#F2E7E1 60%,#EFE2CF 100%);
+  --aura:radial-gradient(60% 60% at 50% 40%,rgba(179,95,99,.55),rgba(110,61,82,.30) 45%,transparent 72%);
+  --shadow-sm:0 4px 16px -8px rgba(35,29,33,.28);--shadow-md:0 20px 48px -28px rgba(76,41,58,.42);--shadow-lg:0 44px 100px -48px rgba(76,41,58,.55);
+  --glass:rgba(251,247,243,.74);--glass-brd:rgba(255,255,255,.7);
 }
 :root[data-theme="dark"]{
   color-scheme: dark;
-  --porcelain:#171214;--paper:#1C1619;--card:#241C20;--ink:#F2E9E6;--muted:#B6A6A2;--faint:#8E7E7A;
-  --line:rgba(242,233,230,.14);--line-soft:rgba(242,233,230,.08);
-  --plum:#C98BA2;--plum-deep:#E0B4C4;--rose:#D98C8A;--blush:#2E2026;--blush-2:#271C21;
-  --gold:#D8AC5E;--gold-soft:#4A3A22;--sage:#8FB199;--sage-soft:#243029;
-  --grad:linear-gradient(135deg,#C98BA2 0%,#D98C8A 100%);
-  --grad-soft:linear-gradient(135deg,#2E2026 0%,#271C21 100%);
-  --shadow-sm:0 2px 10px -6px rgba(0,0,0,.6);--shadow-md:0 18px 44px -24px rgba(0,0,0,.7);--shadow-lg:0 40px 90px -44px rgba(0,0,0,.8);
-  --glass:rgba(28,22,25,.72);--glass-line:rgba(242,233,230,.10);
+  --porcelain:#140F11;--paper:#191316;--card:#211A1E;--card-2:#1C1619;--ink:#F3EAE7;--muted:#B7A7A3;--faint:#8C7C78;
+  --line:rgba(243,234,231,.14);--line-soft:rgba(243,234,231,.07);
+  --plum:#D193A8;--plum-deep:#E6BCCB;--plum-bright:#E09CAE;--rose:#E29391;--blush:#2D1F25;--blush-2:#261B20;--sand:#2A2117;
+  --gold:#D7AB5C;--gold-soft:#463720;--gold-ink:#E6C27E;--sage:#90B29A;--sage-soft:#223029;
+  --grad:linear-gradient(135deg,#D193A8 0%,#E29391 100%);--grad-rev:linear-gradient(135deg,#E29391 0%,#D193A8 100%);
+  --grad-soft:linear-gradient(135deg,#2D1F25 0%,#261B20 60%,#2A2117 100%);
+  --aura:radial-gradient(60% 60% at 50% 40%,rgba(226,147,145,.40),rgba(209,147,168,.22) 45%,transparent 72%);
+  --shadow-sm:0 4px 16px -8px rgba(0,0,0,.6);--shadow-md:0 20px 48px -26px rgba(0,0,0,.72);--shadow-lg:0 44px 100px -46px rgba(0,0,0,.8);
+  --glass:rgba(25,19,22,.74);--glass-brd:rgba(243,234,231,.1);
 }
 
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{
-  margin:0;background:var(--porcelain);color:var(--ink);
-  font-family:var(--f-body);font-size:17px;line-height:1.6;font-weight:400;
-  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
-  overflow-x:hidden;
-}
+body{margin:0;background:var(--porcelain);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+body.nav-open{overflow:hidden}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-button{font:inherit;color:inherit;cursor:pointer}
-h1,h2,h3,h4{margin:0;font-family:var(--f-display);font-weight:500;line-height:1.04;letter-spacing:-.015em;text-wrap:balance;color:var(--ink)}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:none}
+h1,h2,h3,h4{margin:0;font-family:var(--f-display);font-weight:500;line-height:1.03;letter-spacing:-.016em;text-wrap:balance;color:var(--ink)}
 p{margin:0}
 ::selection{background:var(--plum);color:#fff}
 :focus-visible{outline:2.5px solid var(--plum);outline-offset:3px;border-radius:6px}
 
-.wrap{max-width:var(--max);margin-inline:auto;padding-inline:clamp(18px,5vw,40px)}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:9px;font-family:var(--f-mono);
-  font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--plum);
-}
-.eyebrow::before{content:"";width:22px;height:1px;background:var(--gold)}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:clamp(18px,5vw,44px)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-mono);font-size:.72rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--plum)}
+.eyebrow::before{content:"";width:24px;height:1px;background:var(--gold)}
+.eyebrow.c{justify-content:center}
 .serif-it{font-family:var(--f-display);font-style:italic;font-weight:500}
 .num{font-variant-numeric:tabular-nums}
 .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
-/* scroll progress */
-.progress{position:fixed;left:0;top:0;height:2px;z-index:90;width:100%;transform:scaleX(0);transform-origin:0 50%;background:var(--grad)}
+/* grain + progress */
+.grain{position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.035;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .grain{mix-blend-mode:screen;opacity:.05}}
+:root[data-theme="dark"] .grain{mix-blend-mode:screen;opacity:.05}
+.progress{position:fixed;left:0;top:0;height:2px;z-index:95;width:100%;transform:scaleX(0);transform-origin:0 50%;background:var(--grad)}
 
 /* ---------- buttons ---------- */
-.btn{
-  display:inline-flex;align-items:center;gap:10px;border:1px solid transparent;border-radius:999px;
-  padding:13px 22px;font-size:.98rem;font-weight:600;letter-spacing:.01em;
-  transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s,color .25s,border-color .25s;
-}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid transparent;border-radius:999px;padding:14px 24px;font-weight:600;font-size:.98rem;letter-spacing:.005em;transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s,background .28s,color .28s,border-color .28s;white-space:nowrap}
 .btn .arw{transition:transform .25s}
 .btn:hover .arw{transform:translateX(4px)}
 .btn-primary{background:var(--grad);color:#fff;box-shadow:var(--shadow-md)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
 .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
 .btn-ghost:hover{border-color:var(--plum);color:var(--plum);transform:translateY(-2px)}
+.btn-soft{background:var(--card);color:var(--plum);border-color:var(--line);box-shadow:var(--shadow-xs)}
+.btn-soft:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm)}
 .btn:active{transform:translateY(0) scale(.99)}
+.btn.lg{padding:17px 30px;font-size:1.05rem}
 
 /* ---------- nav ---------- */
-.nav{position:sticky;top:14px;z-index:80;margin-top:14px}
-.nav-inner{
-  display:flex;align-items:center;gap:16px;height:60px;padding:0 10px 0 18px;border-radius:999px;
-  background:var(--glass);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);
-  border:1px solid var(--glass-line);box-shadow:var(--shadow-sm);
-}
+.nav{position:sticky;top:14px;z-index:70;margin-top:14px}
+.nav-inner{display:flex;align-items:center;gap:16px;height:62px;padding:0 10px 0 18px;border-radius:999px;background:var(--glass);backdrop-filter:blur(18px) saturate(1.5);-webkit-backdrop-filter:blur(18px) saturate(1.5);border:1px solid var(--glass-brd);box-shadow:var(--shadow-sm)}
 .brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
-.mark{width:34px;height:34px;border-radius:9px;background:var(--grad);display:grid;place-items:center;box-shadow:var(--shadow-sm);flex-shrink:0}
-.mark svg{width:19px;height:19px}
+.mark{width:36px;height:36px;border-radius:10px;background:var(--grad);display:grid;place-items:center;box-shadow:var(--shadow-sm);flex-shrink:0}
+.mark svg{width:20px;height:20px}
 .brand .bt{display:grid;line-height:1}
-.brand b{font-family:var(--f-display);font-weight:600;font-size:1.08rem;letter-spacing:-.01em}
-.brand span{font-family:var(--f-mono);font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:3px}
-.nav-links{display:flex;gap:2px;margin-left:10px}
-.nav-links a{font-size:.9rem;font-weight:500;color:var(--muted);padding:8px 12px;border-radius:999px;transition:color .2s,background .2s}
+.brand b{font-family:var(--f-display);font-weight:600;font-size:1.1rem;letter-spacing:-.01em}
+.brand span{font-family:var(--f-mono);font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.nav-links{display:flex;gap:2px;margin-left:8px}
+.nav-links a{font-size:.9rem;font-weight:500;color:var(--muted);padding:9px 13px;border-radius:999px;transition:color .2s,background .2s;white-space:nowrap}
 .nav-links a:hover{color:var(--ink);background:var(--blush)}
-.nav-right{margin-left:auto;display:flex;align-items:center;gap:8px}
-.icon-btn{width:40px;height:40px;border-radius:999px;border:1px solid var(--line);background:var(--card);display:grid;place-items:center;transition:transform .2s,border-color .2s}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:9px}
+.icon-btn{width:42px;height:42px;border-radius:999px;border:1px solid var(--line);background:var(--card);display:grid;place-items:center;transition:transform .2s,border-color .2s;flex-shrink:0}
 .icon-btn:hover{transform:translateY(-1px);border-color:var(--plum)}
 .icon-btn svg{width:18px;height:18px}
 .sun{display:none}
 :root[data-theme="dark"] .sun{display:block}
 :root[data-theme="dark"] .moon{display:none}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sun{display:block}:root:not([data-theme="light"]) .moon{display:none}}
-.nav .btn{padding:10px 18px;font-size:.9rem}
-@media (max-width:860px){.nav-links{display:none}.nav .nav-cta{display:none}}
+.nav .btn{padding:11px 20px;font-size:.9rem}
+.burger{display:none}
+@media (max-width:1100px){.nav-links,.nav .nav-cta{display:none}.burger{display:grid}}
 
-/* ---------- concept ribbon ---------- */
-.ribbon{
-  display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;
-  font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
-  padding:10px 16px;margin-top:14px;border:1px dashed var(--line);border-radius:12px;background:var(--grad-soft);
-}
-.ribbon b{color:var(--plum)}
+/* audience toggle */
+.aud{position:relative;display:grid;grid-template-columns:1fr 1fr;background:var(--blush);border-radius:999px;padding:4px;flex-shrink:0}
+.aud button{position:relative;z-index:1;padding:8px 15px;border-radius:999px;font-family:var(--f-mono);font-size:.74rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:color .3s;white-space:nowrap}
+.aud button[aria-pressed="true"]{color:#fff}
+.aud-pill{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:999px;background:var(--grad);transition:transform .45s cubic-bezier(.65,0,.2,1);box-shadow:var(--shadow-sm)}
+body[data-aud="practices"] .aud-pill{transform:translateX(100%)}
+body[data-aud="patients"] .for-practices{display:none!important}
+body[data-aud="practices"] .for-patients{display:none!important}
+@media (max-width:620px){.aud{display:none}}
+
+/* mobile menu */
+.drawer{position:fixed;inset:0;z-index:85;background:var(--porcelain);transform:translateY(-100%);transition:transform .5s cubic-bezier(.65,0,.2,1);display:flex;flex-direction:column;padding:26px 24px calc(26px + env(safe-area-inset-bottom));visibility:hidden}
+.drawer.open{transform:none;visibility:visible}
+.drawer-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:30px}
+.drawer nav{display:flex;flex-direction:column;gap:4px}
+.drawer nav a{font-family:var(--f-display);font-size:2rem;font-weight:500;padding:12px 0;border-bottom:1px solid var(--line-soft);color:var(--ink)}
+.drawer .d-aud{margin-top:26px}
+.drawer .d-cta{margin-top:auto;display:grid;gap:10px}
 
 /* ---------- hero ---------- */
-.hero{position:relative;padding-top:clamp(40px,6vw,76px);padding-bottom:clamp(40px,6vw,80px);isolation:isolate;overflow:hidden}
-.mesh{position:absolute;inset:-20% -10% auto;height:120%;z-index:-1;pointer-events:none;filter:blur(60px);opacity:.9}
-.mesh i{position:absolute;border-radius:50%;animation:drift 20s ease-in-out infinite alternate}
-.mesh .m1{width:460px;height:460px;left:-6%;top:-4%;background:var(--blush)}
-.mesh .m2{width:420px;height:420px;right:-4%;top:6%;background:#E9CFBE;opacity:.75;animation-delay:-7s}
-.mesh .m3{width:360px;height:360px;left:34%;top:38%;background:var(--sage-soft);opacity:.6;animation-delay:-12s}
-@keyframes drift{to{transform:translate(40px,30px) scale(1.1)}}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,4vw,64px);align-items:center}
-.hero h1{font-size:clamp(2.9rem,6vw,5rem);letter-spacing:-.025em;margin-top:22px}
+.hero{position:relative;padding-top:clamp(26px,4vw,54px);padding-bottom:clamp(40px,6vw,86px);isolation:isolate;overflow:clip}
+.hero-aura{position:absolute;z-index:-2;width:min(900px,90vw);aspect-ratio:1;right:-12%;top:-8%;background:var(--aura);filter:blur(10px);opacity:.9;animation:pulse 9s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.08);opacity:1}}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(28px,4vw,64px);align-items:center;min-height:min(760px,calc(100svh - 150px))}
+.h-badge{display:inline-flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 15px 7px 9px;font-size:.85rem;font-weight:500;color:var(--ink);box-shadow:var(--shadow-xs)}
+.h-badge .pip{width:8px;height:8px;border-radius:50%;background:var(--sage);box-shadow:0 0 0 4px var(--sage-soft)}
+.hero h1{font-size:clamp(1.85rem,6vw,5.3rem);letter-spacing:-.028em;margin-top:22px;line-height:1.0;overflow-wrap:break-word}
 .hero h1 em{font-style:italic;color:var(--plum)}
-.hero .lede{margin-top:24px;font-size:clamp(1.08rem,1.5vw,1.26rem);color:var(--muted);max-width:40ch;line-height:1.55}
+.hero .lede{margin-top:24px;font-size:clamp(1.08rem,1.5vw,1.3rem);color:var(--muted);max-width:42ch;line-height:1.55}
 .hero .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.hero .trust{margin-top:26px;display:flex;flex-wrap:wrap;gap:18px 26px;font-size:.84rem;color:var(--faint)}
-.hero .trust b{color:var(--ink);font-weight:600}
-.hero .trust span{display:inline-flex;align-items:center;gap:8px}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--sage);box-shadow:0 0 0 4px var(--sage-soft)}
+.hero .proof{margin-top:30px;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
+.hero .proof .stat b{font-family:var(--f-display);font-weight:600;font-size:1.7rem;display:block;line-height:1;letter-spacing:-.02em}
+.hero .proof .stat span{font-size:.8rem;color:var(--faint)}
+.hero .proof .sep{width:1px;height:34px;background:var(--line)}
+.hero .ill{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin-top:16px;overflow-wrap:break-word}
+.hero-grid>*{min-width:0}
 
-/* ---------- concern finder (hero demo) ---------- */
-.finder{
-  position:relative;background:var(--card);border:1px solid var(--line);border-radius:26px;
-  padding:clamp(20px,2.4vw,30px);box-shadow:var(--shadow-lg);
-}
-.finder::before{content:"";position:absolute;inset:0;border-radius:26px;padding:1px;background:linear-gradient(140deg,var(--gold-soft),transparent 40%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.7}
-.finder .f-top .step{display:inline-block;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:12px}
-.finder h3{font-size:1.4rem;letter-spacing:-.01em}
-.finder .f-sub{color:var(--muted);font-size:.95rem;margin-top:6px}
+/* stagger on load */
+.stagger>*{transform:translateY(14px);animation:staggerIn .7s cubic-bezier(.2,.8,.2,1) both}
+.stagger>*:nth-child(1){animation-delay:.04s}.stagger>*:nth-child(2){animation-delay:.12s}
+.stagger>*:nth-child(3){animation-delay:.2s}.stagger>*:nth-child(4){animation-delay:.28s}
+.stagger>*:nth-child(5){animation-delay:.36s}.stagger>*:nth-child(6){animation-delay:.44s}
+@keyframes staggerIn{from{transform:translateY(14px)}to{transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* concern finder (hero centerpiece) */
+.finder{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(20px,2.4vw,28px);box-shadow:var(--shadow-lg);animation:finderIn .8s .2s cubic-bezier(.2,.8,.2,1) both}
+@keyframes finderIn{from{transform:translateY(18px)}to{transform:none}}
+.finder::before{content:"";position:absolute;inset:0;border-radius:var(--r-lg);padding:1px;background:linear-gradient(140deg,var(--gold-soft),transparent 42%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.8}
+.f-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+.f-top .step{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);display:inline-flex;align-items:center;gap:7px}
+.f-top .step .live{width:7px;height:7px;border-radius:50%;background:var(--sage);box-shadow:0 0 0 3px var(--sage-soft);animation:blink 2s infinite}
+@keyframes blink{50%{opacity:.4}}
+.f-ring{width:46px;height:46px;position:relative;flex-shrink:0}
+.f-ring svg{transform:rotate(-90deg)}
+.f-ring .track{stroke:var(--line);stroke-width:4;fill:none}
+.f-ring .fill{stroke:url(#ringgrad);stroke-width:4;fill:none;stroke-linecap:round;stroke-dasharray:126;stroke-dashoffset:126;transition:stroke-dashoffset .7s cubic-bezier(.2,.8,.2,1)}
+.f-ring .pct{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--f-mono);font-size:.64rem;font-weight:500;color:var(--plum)}
+.finder h3{font-size:1.38rem}
+.finder .f-sub{color:var(--muted);font-size:.94rem;margin-top:6px}
 .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
-.chip{
-  display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;
-  border:1px solid var(--line);background:var(--paper);font-size:.9rem;font-weight:500;color:var(--ink);
-  transition:all .2s cubic-bezier(.2,.8,.2,1);
-}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:var(--paper);font-size:.9rem;font-weight:500;color:var(--ink);transition:all .22s cubic-bezier(.2,.8,.2,1)}
 .chip .tick{width:15px;height:15px;border-radius:50%;border:1.5px solid var(--faint);display:grid;place-items:center;transition:all .2s}
 .chip .tick svg{width:9px;height:9px;opacity:0;transform:scale(.4);transition:all .2s;stroke:#fff}
 .chip[aria-pressed="true"]{background:var(--plum);border-color:var(--plum);color:#fff;box-shadow:var(--shadow-sm)}
 .chip[aria-pressed="true"] .tick{background:#fff;border-color:#fff}
 .chip[aria-pressed="true"] .tick svg{opacity:1;transform:scale(1);stroke:var(--plum)}
 .chip:hover{transform:translateY(-1px);border-color:var(--plum)}
-
-.match{margin-top:20px;border-top:1px solid var(--line-soft);padding-top:18px}
-.match-empty{color:var(--faint);font-size:.92rem;display:flex;align-items:center;gap:10px}
+.match{margin-top:20px;border-top:1px solid var(--line-soft);padding-top:18px;min-height:92px}
+.match-empty{color:var(--faint);font-size:.9rem;display:flex;align-items:center;gap:10px}
 .match-empty svg{width:18px;height:18px;flex-shrink:0;color:var(--plum)}
-.match-card{display:none;animation:rise .45s cubic-bezier(.2,.8,.2,1)}
-.match-card.on{display:block}
-@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.match-card{display:none}
+.match-card.on{display:block;animation:rise .5s cubic-bezier(.2,.8,.2,1)}
 .mc-top{display:flex;align-items:center;gap:13px}
-.avatar{width:50px;height:50px;border-radius:14px;background:var(--grad-soft);display:grid;place-items:center;font-family:var(--f-display);font-weight:600;color:var(--plum);font-size:1.25rem;flex-shrink:0;border:1px solid var(--line)}
-.mc-top .who{display:grid;line-height:1.2}
-.mc-top .who b{font-family:var(--f-display);font-weight:600;font-size:1.08rem}
+.avatar{width:50px;height:50px;border-radius:14px;background:var(--grad-soft);display:grid;place-items:center;font-family:var(--f-display);font-weight:600;color:var(--plum);font-size:1.2rem;flex-shrink:0;border:1px solid var(--line)}
+.mc-top .who{display:grid;line-height:1.25}
+.mc-top .who b{font-family:var(--f-display);font-weight:600;font-size:1.06rem}
 .mc-top .who span{font-size:.82rem;color:var(--muted)}
-.verified{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:.74rem;font-weight:600;color:var(--sage);background:var(--sage-soft);border-radius:999px;padding:5px 11px}
+.verified{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:600;color:var(--sage);background:var(--sage-soft);border-radius:999px;padding:5px 11px;white-space:nowrap}
 .verified svg{width:12px;height:12px}
 .mc-reasons{margin-top:14px;display:grid;gap:8px}
-.reason{display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:var(--muted)}
+.reason{display:flex;align-items:flex-start;gap:10px;font-size:.89rem;color:var(--muted)}
 .reason svg{width:16px;height:16px;color:var(--plum);flex-shrink:0;margin-top:2px}
 .reason b{color:var(--ink);font-weight:600}
 .mc-foot{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .mc-foot .btn{padding:10px 18px;font-size:.88rem}
-.mc-note{font-size:.76rem;color:var(--faint);font-family:var(--f-mono);letter-spacing:.04em}
+.mc-note{font-size:.72rem;color:var(--faint);font-family:var(--f-mono)}
+
+/* ---------- trust strip ---------- */
+.trust{border-block:1px solid var(--line);background:var(--paper)}
+.trust-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 30px;padding-block:22px}
+.trust .tlabel{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+.trust .vals{display:flex;flex-wrap:wrap;gap:14px 26px}
+.tval{display:inline-flex;align-items:center;gap:9px;font-size:.9rem;font-weight:500;color:var(--ink)}
+.tval svg{width:18px;height:18px;color:var(--plum)}
 
 /* ---------- section scaffolding ---------- */
 section[id]{scroll-margin-top:92px}
-.band{padding-block:clamp(56px,8vw,112px)}
+.band{padding-block:clamp(60px,9vw,120px)}
 .band.alt{background:var(--paper)}
-.sec-head{max-width:62ch}
-.sec-head h2{font-size:clamp(2rem,3.6vw,3.1rem);margin-top:16px;letter-spacing:-.02em}
+.band.tint{background:var(--grad-soft)}
+.sec-head{max-width:64ch}
+.sec-head.c{margin-inline:auto;text-align:center}
+.sec-head h2{font-size:clamp(2rem,3.8vw,3.3rem);margin-top:16px;letter-spacing:-.022em}
 .sec-head h2 em{font-style:italic;color:var(--plum)}
-.sec-head .sub{color:var(--muted);font-size:clamp(1rem,1.3vw,1.14rem);margin-top:16px;line-height:1.55}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+.sec-head .sub{color:var(--muted);font-size:clamp(1rem,1.35vw,1.16rem);margin-top:16px;line-height:1.55}
+.sec-head.c .sub{margin-inline:auto}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .75s cubic-bezier(.2,.8,.2,1),transform .75s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+
+/* insight band */
+.insight{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
+@media (max-width:900px){.insight{grid-template-columns:1fr}}
+.insight>*{min-width:0}
+.insight .big{font-family:var(--f-display);font-weight:500;font-size:clamp(1.55rem,4.6vw,2.9rem);line-height:1.12;letter-spacing:-.02em;overflow-wrap:break-word}
+.insight .big em{font-style:italic;color:var(--plum)}
+.swap{display:grid;gap:12px}
+.swap-row{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow-xs)}
+.swap-row .x{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex-shrink:0;font-weight:700}
+.swap-row.old .x{background:var(--blush-2);color:var(--rose)}
+.swap-row.new .x{background:var(--sage-soft);color:var(--sage)}
+.swap-row .t b{display:block;font-weight:600}
+.swap-row .t span{font-size:.86rem;color:var(--muted)}
+.swap-row svg{width:17px;height:17px}
 
 /* steps */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:44px}
-.step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px;transition:transform .3s,box-shadow .3s,border-color .3s}
-.step:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--line)}
-.step .n{font-family:var(--f-mono);font-size:.76rem;color:var(--gold);letter-spacing:.1em}
-.step h3{font-size:1.18rem;margin-top:12px}
-.step p{color:var(--muted);font-size:.93rem;margin-top:9px}
-.step .ic{position:absolute;top:22px;right:22px;width:34px;height:34px;border-radius:10px;background:var(--grad-soft);display:grid;place-items:center;color:var(--plum)}
-.step .ic svg{width:17px;height:17px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:48px}
+@media (max-width:1040px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+.step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 20px;transition:transform .3s,box-shadow .3s}
+.step:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+.step .ic{width:40px;height:40px;border-radius:11px;background:var(--grad-soft);display:grid;place-items:center;color:var(--plum);margin-bottom:16px}
+.step .ic svg{width:20px;height:20px}
+.step .n{font-family:var(--f-mono);font-size:.72rem;color:var(--gold-ink)}
+.step h3{font-size:1.1rem;margin-top:8px}
+.step p{color:var(--muted);font-size:.9rem;margin-top:8px}
 
-/* two-col generic */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:center}
-@media (max-width:880px){.split{grid-template-columns:1fr}}
+/* ---------- quiz (conversion) ---------- */
+.quizwrap{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);overflow:hidden;max-width:720px;margin-inline:auto}
+.q-bar{height:5px;background:var(--blush-2)}
+.q-bar i{display:block;height:100%;width:25%;background:var(--grad);transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.q-inner{padding:clamp(24px,3.4vw,42px)}
+.q-meta{display:flex;align-items:center;justify-content:space-between;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:18px}
+.q-panel{display:none}
+.q-panel.on{display:block;animation:slidein .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes slidein{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+.q-panel h3{font-size:clamp(1.5rem,2.6vw,2.1rem)}
+.q-panel .qh-sub{color:var(--muted);margin-top:8px;font-size:.98rem}
+.opt-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+@media (max-width:520px){.opt-grid{grid-template-columns:1fr}}
+.opt{display:flex;align-items:center;gap:12px;padding:15px 16px;border-radius:14px;border:1px solid var(--line);background:var(--paper);text-align:left;transition:all .2s;font-size:.96rem;font-weight:500}
+.opt:hover{border-color:var(--plum);transform:translateY(-2px)}
+.opt[aria-pressed="true"]{background:var(--blush);border-color:var(--plum);color:var(--plum)}
+.opt .box{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--faint);display:grid;place-items:center;flex-shrink:0;transition:all .2s}
+.opt .box svg{width:12px;height:12px;stroke:#fff;opacity:0;transition:opacity .2s}
+.opt[aria-pressed="true"] .box{background:var(--plum);border-color:var(--plum)}
+.opt[aria-pressed="true"] .box svg{opacity:1}
+.opt.radio .box{border-radius:50%}
+.field{width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:var(--paper);font:inherit;color:var(--ink);margin-top:10px}
+.field:focus{outline:none;border-color:var(--plum);box-shadow:0 0 0 3px var(--blush)}
+.q-grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+@media (max-width:520px){.q-grid2{grid-template-columns:1fr}}
+.q-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:26px}
+.q-nav .back{font-size:.9rem;color:var(--muted);font-weight:500;display:inline-flex;align-items:center;gap:6px}
+.q-nav .back:hover{color:var(--plum)}
+.q-err{color:var(--rose);font-size:.85rem;margin-top:12px;display:none}
+.q-err.on{display:block}
+/* quiz result */
+.q-result{display:none;text-align:center;padding:8px 0}
+.q-result.on{display:block;animation:rise .6s cubic-bezier(.2,.8,.2,1)}
+.q-result .check{width:64px;height:64px;border-radius:50%;background:var(--sage-soft);display:grid;place-items:center;margin:0 auto 18px;color:var(--sage)}
+.q-result .check svg{width:30px;height:30px}
+.q-result h3{font-size:1.8rem}
+.q-result p{color:var(--muted);margin-top:10px;max-width:46ch;margin-inline:auto}
+.q-result .rcard{margin-top:22px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px}
+.q-privacy{font-family:var(--f-mono);font-size:.68rem;color:var(--faint);margin-top:16px;display:flex;gap:8px;align-items:center;justify-content:center}
+.q-privacy svg{width:13px;height:13px}
 
-/* questionnaire preview */
-.quiz{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:clamp(22px,2.6vw,30px);box-shadow:var(--shadow-md)}
-.q-row{padding:16px 0;border-bottom:1px solid var(--line-soft)}
-.q-row:last-child{border-bottom:0;padding-bottom:0}
-.q-row:first-child{padding-top:0}
-.q-label{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
-.q-opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:11px}
-.pill{padding:7px 13px;border-radius:999px;border:1px solid var(--line);background:var(--paper);font-size:.86rem;color:var(--ink)}
-.pill.sel{background:var(--blush);border-color:var(--plum);color:var(--plum);font-weight:600}
-.q-note{margin-top:18px;font-size:.84rem;color:var(--muted);display:flex;gap:9px;align-items:flex-start}
-.q-note svg{width:16px;height:16px;color:var(--gold);flex-shrink:0;margin-top:2px}
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+@media (max-width:820px){.stats{grid-template-columns:1fr 1fr}}
+.statc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;text-align:center}
+.statc b{font-family:var(--f-display);font-weight:600;font-size:clamp(2.4rem,4.5vw,3.3rem);display:block;line-height:1;letter-spacing:-.03em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.statc span{font-size:.9rem;color:var(--muted);margin-top:12px;display:block}
 
 /* differentiators */
-.diffs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
-@media (max-width:880px){.diffs{grid-template-columns:1fr}}
-.diff{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px;position:relative;overflow:hidden}
+.diffs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+@media (max-width:900px){.diffs{grid-template-columns:1fr}}
+.diff{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.diff:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
 .diff::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad)}
-.diff .dic{width:46px;height:46px;border-radius:13px;background:var(--grad-soft);display:grid;place-items:center;color:var(--plum);margin-bottom:18px}
-.diff .dic svg{width:23px;height:23px}
-.diff h3{font-size:1.28rem}
+.diff .dic{width:48px;height:48px;border-radius:13px;background:var(--grad-soft);display:grid;place-items:center;color:var(--plum);margin-bottom:18px}
+.diff .dic svg{width:24px;height:24px}
+.diff h3{font-size:1.3rem}
 .diff p{color:var(--muted);font-size:.95rem;margin-top:11px}
-.diff .flag{margin-top:15px;font-size:.8rem;color:var(--gold);font-weight:600;display:inline-flex;align-items:center;gap:7px}
+.diff .flag{margin-top:15px;font-size:.8rem;color:var(--gold-ink);font-weight:600;display:inline-flex;align-items:center;gap:7px}
 .diff .flag svg{width:14px;height:14px}
 
-/* profile card */
+/* profile + for-practices */
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:center}
+@media (max-width:900px){.pgrid{grid-template-columns:1fr}}
 .profile{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow-md)}
 .p-banner{background:var(--grad);padding:26px 28px;color:#fff;display:flex;align-items:center;gap:16px}
-.p-banner .av{width:62px;height:62px;border-radius:16px;background:rgba(255,255,255,.18);display:grid;place-items:center;font-family:var(--f-display);font-weight:600;font-size:1.5rem;backdrop-filter:blur(6px)}
+.p-banner .av{width:62px;height:62px;border-radius:16px;background:rgba(255,255,255,.2);display:grid;place-items:center;font-family:var(--f-display);font-weight:600;font-size:1.5rem}
 .p-banner .pt b{font-family:var(--f-display);font-weight:600;font-size:1.4rem;display:block}
-.p-banner .pt span{opacity:.9;font-size:.9rem}
+.p-banner .pt span{opacity:.92;font-size:.9rem}
 .p-body{padding:24px 28px}
-.p-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:var(--gold-soft);padding:5px 11px;border-radius:999px;margin-bottom:16px}
-.p-body h4{font-family:var(--f-mono);font-weight:500;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:18px 0 10px}
+.p-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink);background:var(--gold-soft);padding:5px 11px;border-radius:999px;margin-bottom:16px}
+.p-body h4{font-family:var(--f-mono);font-weight:500;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:18px 0 10px}
 .svc{display:flex;flex-wrap:wrap;gap:8px}
 .svc span{padding:6px 12px;border-radius:8px;background:var(--paper);border:1px solid var(--line);font-size:.84rem}
-.p-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:14px;margin-top:20px}
-.p-meta .m b{display:block;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
-.p-meta .m span{font-weight:600}
+.p-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.p-meta .m b{display:block;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
+.p-meta .m span{font-weight:600;font-size:.92rem}
 
-/* data / funnel / tables */
-.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:40px}
-.metric{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 20px}
-.metric b{font-family:var(--f-display);font-weight:500;font-size:2.3rem;display:block;letter-spacing:-.02em;line-height:1}
-.metric b small{font-size:1.1rem;color:var(--muted)}
-.metric span{font-size:.86rem;color:var(--muted);margin-top:8px;display:block}
+/* pricing */
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+@media (max-width:900px){.pricing{grid-template-columns:1fr}}
+.tier{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px 28px;position:relative;display:flex;flex-direction:column}
+.tier.feat{border-color:var(--plum);box-shadow:var(--shadow-md)}
+.tier .ftag{position:absolute;top:-12px;left:28px;background:var(--grad);color:#fff;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.tier h3{font-size:1.2rem}
+.tier .price{font-family:var(--f-display);font-weight:600;font-size:2.6rem;letter-spacing:-.02em;margin-top:14px;line-height:1}
+.tier .price small{font-size:1rem;color:var(--muted);font-family:var(--f-body);font-weight:400}
+.tier .pdesc{color:var(--muted);font-size:.9rem;margin-top:10px}
+.tier ul{list-style:none;padding:0;margin:20px 0 24px;display:grid;gap:11px}
+.tier li{display:flex;gap:10px;font-size:.92rem;align-items:flex-start}
+.tier li svg{width:17px;height:17px;color:var(--sage);flex-shrink:0;margin-top:2px}
+.tier .btn{margin-top:auto;width:100%}
 
-.funnel{display:grid;gap:10px;margin-top:8px}
+/* dashboard mock */
+.dash{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md)}
+.dash-top{display:flex;align-items:center;gap:8px;padding:14px 18px;border-bottom:1px solid var(--line);background:var(--paper)}
+.dash-top .dots{display:flex;gap:6px}
+.dash-top .dots i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.dash-top b{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin-left:8px}
+.dash-body{padding:22px}
+.dash-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.kpi{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px}
+.kpi b{font-family:var(--f-display);font-weight:600;font-size:1.6rem;display:block;letter-spacing:-.02em}
+.kpi span{font-size:.74rem;color:var(--faint)}
+.kpi .up{color:var(--sage);font-size:.74rem;font-weight:600}
+.funnel{display:grid;gap:9px;margin-top:18px}
 .fn{display:grid;grid-template-columns:1fr auto;align-items:center;gap:14px}
-.fn .bar-wrap{background:var(--blush-2);border-radius:10px;overflow:hidden;height:46px;position:relative;display:flex;align-items:center}
-.fn .bar{height:100%;background:var(--grad);border-radius:10px;display:flex;align-items:center;padding-left:16px;color:#fff;font-weight:600;font-size:.92rem;min-width:max-content;box-shadow:var(--shadow-sm);transition:width 1.1s cubic-bezier(.2,.8,.2,1);width:0}
-.fn .count{font-family:var(--f-mono);font-size:1.02rem;font-weight:500;min-width:62px;text-align:right}
-.fn .count small{color:var(--faint);font-size:.72rem;display:block}
+.fn .bw{background:var(--blush-2);border-radius:9px;overflow:hidden;height:40px;display:flex;align-items:center}
+.fn .bar{height:100%;background:var(--grad);border-radius:9px;display:flex;align-items:center;padding-left:14px;color:#fff;font-weight:600;font-size:.86rem;min-width:max-content;transition:width 1.1s cubic-bezier(.2,.8,.2,1);width:0}
+.fn .ct{font-family:var(--f-mono);font-size:.94rem;min-width:50px;text-align:right}
 
-.tbl-wrap{overflow-x:auto;margin-top:24px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
-table{border-collapse:collapse;width:100%;min-width:360px}
-th,td{padding:14px 18px;text-align:left;font-size:.94rem}
-th{font-family:var(--f-mono);font-weight:500;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);border-bottom:1px solid var(--line)}
-td{border-bottom:1px solid var(--line-soft)}
-tr:last-child td{border-bottom:0}
-td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
-tr.hl td{background:var(--blush);font-weight:600}
+/* testimonials */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+@media (max-width:900px){.tgrid{grid-template-columns:1fr}}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px;display:flex;flex-direction:column}
+.tcard .stars{display:flex;gap:3px;color:var(--gold);margin-bottom:14px}
+.tcard .stars svg{width:16px;height:16px}
+.tcard blockquote{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.14rem;line-height:1.4;letter-spacing:-.01em}
+.tcard .who{margin-top:auto;padding-top:18px;display:flex;align-items:center;gap:11px}
+.tcard .who .av{width:38px;height:38px;border-radius:50%;background:var(--grad-soft);display:grid;place-items:center;font-weight:600;color:var(--plum);font-size:.9rem}
+.tcard .who b{font-size:.92rem;display:block}
+.tcard .who span{font-size:.78rem;color:var(--faint)}
 
-/* roadmap timeline */
-.road{margin-top:46px;display:grid;gap:0;position:relative}
-.road::before{content:"";position:absolute;left:19px;top:14px;bottom:14px;width:2px;background:linear-gradient(var(--plum),var(--gold));opacity:.4}
-@media (min-width:760px){.road::before{left:50%;transform:translateX(-1px)}}
-.rp{position:relative;padding:18px 0 18px 54px}
-@media (min-width:760px){
-  .rp{width:50%;padding:22px 40px}
-  .rp:nth-child(odd){left:0;text-align:right}
-  .rp:nth-child(even){left:50%}
-}
-.rp .node{position:absolute;left:11px;top:24px;width:18px;height:18px;border-radius:50%;background:var(--card);border:3px solid var(--plum);box-shadow:0 0 0 5px var(--porcelain)}
-@media (min-width:760px){
-  .rp:nth-child(odd) .node{left:auto;right:-9px}
-  .rp:nth-child(even) .node{left:-9px}
-}
-.rp .ph{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
-.rp h3{font-size:1.3rem;margin-top:8px}
-.rp .tl{font-size:.82rem;color:var(--plum);font-weight:600;margin-top:6px}
-.rp p{color:var(--muted);font-size:.92rem;margin-top:8px}
+/* faq */
+.faq{max-width:780px;margin:48px auto 0}
+.qa{border-bottom:1px solid var(--line)}
+.qa summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--f-display);font-weight:500;font-size:1.18rem}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary .pm{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0;transition:transform .3s,background .3s,color .3s}
+.qa summary .pm svg{width:14px;height:14px}
+.qa[open] summary .pm{background:var(--plum);color:#fff;border-color:var(--plum);transform:rotate(45deg)}
+.qa .ans{padding:0 0 22px;color:var(--muted);max-width:68ch}
 
-/* risks */
-.risks{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px}
-@media (max-width:760px){.risks{grid-template-columns:1fr}}
-.risk{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;display:flex;gap:16px}
-.risk .ri{width:40px;height:40px;border-radius:11px;background:var(--grad-soft);display:grid;place-items:center;color:var(--plum);flex-shrink:0}
-.risk .ri svg{width:20px;height:20px}
-.risk h3{font-size:1.08rem}
-.risk p{color:var(--muted);font-size:.9rem;margin-top:7px}
-
-/* next steps */
-.nsteps{counter-reset:ns;margin-top:40px;display:grid;gap:12px}
-.ns{counter-increment:ns;display:flex;gap:18px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;transition:transform .25s,border-color .25s}
-.ns:hover{transform:translateX(5px);border-color:var(--plum)}
-.ns::before{content:counter(ns,decimal-leading-zero);font-family:var(--f-mono);font-size:.9rem;color:var(--plum);font-weight:500;flex-shrink:0;padding-top:2px}
-.ns p{font-size:.98rem}
-.ns p b{font-weight:600}
-
-/* closing cta */
-.closer{position:relative;margin:clamp(40px,6vw,80px) auto;max-width:var(--max);border-radius:28px;overflow:hidden;background:var(--grad);color:#fff;padding:clamp(40px,6vw,76px) clamp(26px,5vw,64px);isolation:isolate}
-.closer::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(500px 300px at 80% 10%,rgba(255,255,255,.18),transparent 60%)}
-.closer .eyebrow{color:#fff}
+/* final cta */
+.closer{position:relative;margin:clamp(40px,6vw,84px) auto;max-width:var(--max);border-radius:30px;overflow:hidden;background:var(--grad);color:#fff;padding:clamp(44px,7vw,88px) clamp(26px,5vw,70px);isolation:isolate}
+.closer::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(600px 340px at 82% 6%,rgba(255,255,255,.2),transparent 60%)}
+.closer .eyebrow{color:rgba(255,255,255,.9)}
 .closer .eyebrow::before{background:rgba(255,255,255,.6)}
-.closer h2{color:#fff;font-size:clamp(2rem,4vw,3.3rem);max-width:20ch;margin-top:16px}
-.closer p{color:rgba(255,255,255,.88);max-width:52ch;margin-top:18px;font-size:1.08rem}
+.closer h2{color:#fff;font-size:clamp(2.1rem,4.4vw,3.6rem);max-width:19ch;margin-top:16px;letter-spacing:-.02em}
+.closer p{color:rgba(255,255,255,.9);max-width:52ch;margin-top:18px;font-size:1.08rem}
 .closer .cta-row{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
 .closer .btn-light{background:#fff;color:var(--plum-deep)}
 .closer .btn-light:hover{transform:translateY(-2px);box-shadow:0 20px 40px -20px rgba(0,0,0,.4)}
 .closer .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
-.closer .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.closer .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.12)}
 
 /* footer */
-footer{border-top:1px solid var(--line);padding-block:48px;background:var(--paper)}
-.foot-grid{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start}
-.foot-brand{max-width:36ch}
-.foot-brand .brand{margin-bottom:14px}
-.foot-brand p{color:var(--muted);font-size:.88rem}
-.foot-disc{max-width:48ch;font-size:.8rem;color:var(--faint);line-height:1.6;background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:16px 18px}
+footer{border-top:1px solid var(--line);padding-block:52px 40px;background:var(--paper)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+@media (max-width:760px){.foot-grid{grid-template-columns:1fr}}
+.foot-brand p{color:var(--muted);font-size:.9rem;margin-top:14px;max-width:34ch}
+.fcol h4{font-family:var(--f-mono);font-weight:500;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:14px}
+.fcol a{display:block;color:var(--muted);font-size:.92rem;padding:5px 0;transition:color .2s}
+.fcol a:hover{color:var(--plum)}
+.foot-disc{margin-top:38px;font-size:.78rem;color:var(--faint);line-height:1.6;background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:16px 18px}
 .foot-disc b{color:var(--muted)}
-.credit{margin-top:34px;padding-top:22px;border-top:1px solid var(--line-soft);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;font-size:.84rem;color:var(--muted)}
+.credit{margin-top:24px;padding-top:22px;border-top:1px solid var(--line-soft);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;font-size:.84rem;color:var(--muted)}
 .credit a{color:var(--plum);font-weight:600}
 
-@media (max-width:880px){
-  .hero-grid{grid-template-columns:1fr}
-  .finder{order:2}
-}
+/* sticky mobile cta */
+.mcta{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;gap:10px;padding:10px;border-radius:18px;background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glass-brd);box-shadow:var(--shadow-lg)}
+.mcta .btn{flex:1;padding:14px}
+@media (max-width:720px){.mcta{display:flex}body{padding-bottom:84px}}
+
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;min-height:auto;gap:28px}.finder{order:2}.pgrid>*{min-width:0}}
+@media (max-width:620px){h1,h2,h3,h4{text-wrap:normal}.hero h1{letter-spacing:-.015em}.trust-inner{gap:14px}.vals{gap:11px 16px}.tval{font-size:.84rem}.tval svg{width:16px;height:16px}}
 @media (prefers-reduced-motion: reduce){
   *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
-  .reveal{opacity:1;transform:none}
+  .reveal,.stagger>*,.finder{opacity:1!important;transform:none!important}
 }
 </style>
 </head>
-<body>
+<body data-aud="patients">
+<div class="grain" aria-hidden="true"></div>
 <div class="progress" id="progress" aria-hidden="true"></div>
 
 <!-- NAV -->
@@ -410,60 +479,101 @@ footer{border-top:1px solid var(--line);padding-block:48px;background:var(--pape
   <div class="wrap">
     <div class="nav-inner">
       <a class="brand" href="#top" aria-label="Aesthetic Match home">
-        <span class="mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z" fill="#fff"/></svg>
-        </span>
-        <span class="bt"><b>Aesthetic Match</b><span>Concept · Alteva Digital</span></span>
+        <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z" fill="#fff"/></svg></span>
+        <span class="bt"><b>Aesthetic&nbsp;Match</b><span>Concept · Alteva</span></span>
       </a>
-      <nav class="nav-links" aria-label="Sections">
-        <a href="#experience">Experience</a>
-        <a href="#different">Difference</a>
-        <a href="#model">Model</a>
-        <a href="#pilot">Pilot</a>
-        <a href="#roadmap">Roadmap</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#how">How it works</a>
+        <a href="#match">Find a match</a>
+        <a href="#different">Why us</a>
+        <a href="#practices">For practices</a>
+        <a href="#faq">FAQ</a>
       </nav>
       <div class="nav-right">
+        <div class="aud" role="group" aria-label="Choose audience">
+          <span class="aud-pill" aria-hidden="true"></span>
+          <button data-aud="patients" aria-pressed="true">Patients</button>
+          <button data-aud="practices" aria-pressed="false">Practices</button>
+        </div>
         <button class="icon-btn" id="themeBtn" aria-label="Toggle light and dark theme">
           <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
           <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         </button>
-        <a class="btn btn-primary nav-cta" href="#next">Next steps <span class="arw" aria-hidden="true">→</span></a>
+        <a class="btn btn-primary nav-cta for-patients" href="#match">Find my match <span class="arw" aria-hidden="true">→</span></a>
+        <a class="btn btn-primary nav-cta for-practices" href="#practices">Partner with us <span class="arw" aria-hidden="true">→</span></a>
+        <button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
       </div>
-    </div>
-    <div class="ribbon" id="top">
-      <span>◆ <b>Product concept</b>, not a live service</span>
-      <span>· Figures &amp; profiles are illustrative</span>
-      <span>· Pilot idea: Howell, Michigan</span>
     </div>
   </div>
 </header>
 
+<!-- MOBILE DRAWER -->
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-top">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z" fill="#fff"/></svg></span><span class="bt"><b>Aesthetic Match</b><span>Concept · Alteva</span></span></a>
+    <button class="icon-btn" id="drawerClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <nav>
+    <a href="#how" data-close>How it works</a>
+    <a href="#match" data-close>Find a match</a>
+    <a href="#different" data-close>Why us</a>
+    <a href="#practices" data-close>For practices</a>
+    <a href="#faq" data-close>FAQ</a>
+  </nav>
+  <div class="d-aud">
+    <div class="aud" role="group" aria-label="Choose audience" style="display:grid">
+      <span class="aud-pill" aria-hidden="true"></span>
+      <button data-aud="patients" aria-pressed="true">Patients</button>
+      <button data-aud="practices" aria-pressed="false">Practices</button>
+    </div>
+  </div>
+  <div class="d-cta">
+    <a class="btn btn-primary lg for-patients" href="#match" data-close>Find my match →</a>
+    <a class="btn btn-primary lg for-practices" href="#practices" data-close>Partner with us →</a>
+  </div>
+</div>
+
 <!-- HERO -->
-<section class="hero">
-  <div class="mesh" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i></div>
+<section class="hero" id="top">
+  <div class="hero-aura" aria-hidden="true"></div>
   <div class="wrap">
     <div class="hero-grid">
-      <div class="hero-copy">
-        <span class="eyebrow">Patient-to-provider matching</span>
-        <h1>Describe the concern.<br>Meet the <em>right</em> provider.</h1>
-        <p class="lede">Most people don't know whether they need Botox, a filler, microneedling, or a laser. Aesthetic Match starts with what they actually want to improve — and connects them to qualified local providers. The clinician decides what's appropriate, never the algorithm.</p>
+      <div class="hero-copy stagger">
+        <span class="h-badge"><span class="pip" aria-hidden="true"></span> <span class="for-patients">Concern-first · clinician-led · free for patients</span><span class="for-practices">Qualified patients · closed-loop measurement</span></span>
+        <h1 class="for-patients">Describe the concern.<br>Meet the <em>right</em> provider.</h1>
+        <h1 class="for-practices">The patients who<br>already <em>want</em> what you do.</h1>
+        <p class="lede for-patients">You don't need to know whether it's Botox, filler, microneedling, or a laser. Tell us what bothers you — we match you to qualified, credential-verified providers nearby. The clinician decides what's appropriate, never an algorithm.</p>
+        <p class="lede for-practices">Aesthetic Match sends you patients who've described their goals and chosen a consult — then measures the whole journey, from first question to booked visit. You pay for results, not clicks.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#finder">Try the concern finder <span class="arw" aria-hidden="true">→</span></a>
-          <a class="btn btn-ghost" href="#experience">See how it works</a>
+          <a class="btn btn-primary lg for-patients" href="#match">Find my match <span class="arw" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost lg for-patients" href="#how">How it works</a>
+          <a class="btn btn-primary lg for-practices" href="#practices">See practice plans <span class="arw" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost lg for-practices" href="#pilot">See the pilot funnel</a>
         </div>
-        <div class="trust">
-          <span><i class="dot"></i> <b>Concern-first</b>, not procedure-first</span>
-          <span><i class="dot"></i> Matches on <b>suitability</b>, not just ad spend</span>
-          <span><i class="dot"></i> <b>Closed-loop</b> from question to booking</span>
+        <div class="proof">
+          <div class="stat"><b class="num" data-count="60" data-suffix="s">60s</b><span>to your first matches</span></div>
+          <span class="sep" aria-hidden="true"></span>
+          <div class="stat"><b class="num" data-count="6" data-suffix=" concerns">6</b><span>goals, not procedures</span></div>
+          <span class="sep" aria-hidden="true"></span>
+          <div class="stat"><b>$0</b><span>for patients, always</span></div>
         </div>
+        <p class="ill">◆ Illustrative concept · examples only</p>
       </div>
 
-      <!-- interactive demo -->
+      <!-- CONCERN FINDER -->
       <div class="finder" id="finder">
         <div class="f-top">
-          <span class="step">Live concept demo</span>
-          <h3>What would you like to improve?</h3>
-          <p class="f-sub">Pick one or more. Watch an illustrative match appear.</p>
+          <div>
+            <span class="step"><span class="live" aria-hidden="true"></span> Live match preview</span>
+            <h3 style="margin-top:10px">What would you like to improve?</h3>
+            <p class="f-sub">Pick one or more. Watch a match form.</p>
+          </div>
+          <div class="f-ring" aria-hidden="true">
+            <svg width="46" height="46" viewBox="0 0 46 46"><defs><linearGradient id="ringgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A4860"/><stop offset="1" stop-color="#B35F63"/></linearGradient></defs><circle class="track" cx="23" cy="23" r="20"/><circle class="fill" id="ringFill" cx="23" cy="23" r="20"/></svg>
+            <span class="pct" id="ringPct">0%</span>
+          </div>
         </div>
         <div class="chips" id="chips" role="group" aria-label="Select your concerns">
           <button class="chip" aria-pressed="false" data-c="lines">Fine lines &amp; wrinkles <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span></button>
@@ -473,7 +583,6 @@ footer{border-top:1px solid var(--line);padding-block:48px;background:var(--pape
           <button class="chip" aria-pressed="false" data-c="laxity">Skin laxity <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span></button>
           <button class="chip" aria-pressed="false" data-c="acne">Acne scars <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span></button>
         </div>
-
         <div class="match">
           <div class="match-empty" id="matchEmpty">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
@@ -483,12 +592,12 @@ footer{border-top:1px solid var(--line);padding-block:48px;background:var(--pape
             <div class="mc-top">
               <div class="avatar">PT</div>
               <div class="who"><b>Paige Thomas, NP</b><span>Howell, Michigan · 12 mi away</span></div>
-              <span class="verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Credential-verified</span>
+              <span class="verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Verified</span>
             </div>
             <div class="mc-reasons" id="reasons"></div>
             <div class="mc-foot">
-              <a class="btn btn-primary" href="#profile">Request a consultation</a>
-              <span class="mc-note">Illustrative match · not a diagnosis</span>
+              <a class="btn btn-primary" href="#match">Request a consultation</a>
+              <span class="mc-note">Illustrative · not a diagnosis</span>
             </div>
           </div>
         </div>
@@ -497,135 +606,241 @@ footer{border-top:1px solid var(--line);padding-block:48px;background:var(--pape
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section class="band alt" id="experience">
+<!-- TRUST STRIP -->
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-inner">
+      <span class="tlabel">Built on principles, not just placement</span>
+      <div class="vals">
+        <span class="tval"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 7v5c0 4.5 3.5 7.5 8 9 4.5-1.5 8-4.5 8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg> Credential-verified providers</span>
+        <span class="tval"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Privacy-first by design</span>
+        <span class="tval"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M22 4 12 14.01l-3-3"/></svg> Clinician-led decisions</span>
+        <span class="tval"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> No surprise fees</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INSIGHT -->
+<section class="band">
+  <div class="wrap">
+    <div class="insight">
+      <div class="reveal">
+        <span class="eyebrow">The problem</span>
+        <p class="big" style="margin-top:18px">Most people don't need <em>"Botox."</em> They need someone who understands <em>what's actually bothering them</em> — and knows the right path.</p>
+      </div>
+      <div class="swap reveal d1">
+        <div class="swap-row old">
+          <span class="x" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></span>
+          <div class="t"><b>"Botox near me"</b><span>Guessing a procedure, sorting through ads, hoping for the best.</span></div>
+        </div>
+        <div class="swap-row old">
+          <span class="x" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></span>
+          <div class="t"><b>Ranked by ad spend</b><span>The loudest listing wins — not the best fit for your skin.</span></div>
+        </div>
+        <div class="swap-row new">
+          <span class="x" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>
+          <div class="t"><b>"I want smoother skin"</b><span>Start with the goal. We translate it into the right consultations.</span></div>
+        </div>
+        <div class="swap-row new">
+          <span class="x" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>
+          <div class="t"><b>Ranked by suitability</b><span>Credentials, services, preferences, proximity — ad spend disclosed, never disguised.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="band alt" id="how">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">The patient experience</span>
-      <h2>Five steps from a <em>feeling</em> to a booked consultation.</h2>
-      <p class="sub">A visitor who only knows that something bothers them is guided to a qualified provider — without ever needing the name of a treatment.</p>
+      <span class="eyebrow">How it works</span>
+      <h2>From a <em>feeling</em> to a booked consultation — in five steps.</h2>
+      <p class="sub">No procedure names required. Just what you want to improve, and a few preferences.</p>
     </div>
     <div class="steps">
       <div class="step reveal">
-        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 15s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></span>
-        <span class="n">Step 01</span>
-        <h3>Identify concerns</h3>
-        <p>They select goals — fine lines, pores and texture, pigmentation, volume, laxity, acne scars — instead of searching for "Botox near me."</p>
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 15s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></span>
+        <span class="n">01</span><h3>Identify concerns</h3>
+        <p>Pick your goals — lines, texture, pigmentation, volume, laxity, acne scars.</p>
       </div>
-      <div class="step reveal">
-        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
-        <span class="n">Step 02</span>
-        <h3>Build a profile</h3>
-        <p>Budget range, downtime tolerance, prior experience, and travel radius — plus whether they prefer subtle or more noticeable results.</p>
+      <div class="step reveal d1">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+        <span class="n">02</span><h3>Build a profile</h3>
+        <p>Budget, downtime, prior experience, travel radius — and subtle vs. noticeable.</p>
       </div>
-      <div class="step reveal">
-        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
-        <span class="n">Step 03</span>
-        <h3>Discover providers</h3>
-        <p>Relevant local providers with verified credentials, applicable services, consultation fees, and authentic reviews.</p>
+      <div class="step reveal d2">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+        <span class="n">03</span><h3>Discover providers</h3>
+        <p>Verified credentials, relevant services, consult fees, and authentic reviews.</p>
       </div>
-      <div class="step reveal">
-        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
-        <span class="n">Step 04</span>
-        <h3>Request a consult</h3>
-        <p>The patient requests a visit. The clinician — not the platform — determines medical appropriateness.</p>
+      <div class="step reveal d1">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+        <span class="n">04</span><h3>Request a consult</h3>
+        <p>The clinician — not the platform — determines what's medically appropriate.</p>
       </div>
-      <div class="step reveal">
-        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12A10 10 0 1 1 12 2"/><path d="M22 4 12 14.01l-3-3"/></svg></span>
-        <span class="n">Step 05</span>
-        <h3>Continue the journey</h3>
-        <p>After the clinician's assessment, an optional personalized plan supports education, follow-up, and rebooking.</p>
+      <div class="step reveal d2">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12A10 10 0 1 1 12 2"/><path d="M22 4 12 14.01l-3-3"/></svg></span>
+        <span class="n">05</span><h3>Continue the journey</h3>
+        <p>An optional personalized plan supports education, follow-up, and rebooking.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- QUESTIONNAIRE -->
-<section class="band">
+<!-- QUIZ -->
+<section class="band" id="match">
   <div class="wrap">
-    <div class="split">
-      <div class="reveal">
-        <span class="eyebrow">Example questionnaire</span>
-        <h2 style="font-size:clamp(1.9rem,3.2vw,2.8rem);margin-top:14px">An educational <span class="serif-it" style="color:var(--plum)">aesthetic profile</span> — never a diagnosis.</h2>
-        <p class="sub" style="max-width:46ch">A few light questions produce a profile and a set of provider matches. No medical histories or facial photographs in the first release — only what's needed to match well.</p>
-        <div class="q-note" style="margin-top:22px">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
-          <span>The result is a set of matches and an educational profile — <b>not</b> an automated treatment prescription.</span>
-        </div>
-      </div>
-      <div class="quiz reveal" aria-hidden="true">
-        <div class="q-row">
-          <div class="q-label">What would you like to improve? — select all</div>
-          <div class="q-opts">
-            <span class="pill sel">Fine lines</span><span class="pill sel">Texture &amp; pores</span>
-            <span class="pill">Pigmentation</span><span class="pill">Facial volume</span>
-            <span class="pill">Skin laxity</span><span class="pill">Acne scars</span>
+    <div class="sec-head c reveal">
+      <span class="eyebrow c">Find your match</span>
+      <h2>Your matches in about <em>60 seconds</em>.</h2>
+      <p class="sub">Answer a few questions. We'll build an educational profile and a shortlist of suitable providers. No diagnosis, no obligation.</p>
+    </div>
+    <div class="quizwrap reveal d1" style="margin-top:48px">
+      <div class="q-bar" aria-hidden="true"><i id="qFill"></i></div>
+      <div class="q-inner">
+        <div class="q-meta" id="qMeta"><span>Consultation finder</span><span id="qCount">Step 1 of 4</span></div>
+
+        <!-- step 1 -->
+        <div class="q-panel on" data-step="1">
+          <h3>What would you like to improve?</h3>
+          <p class="qh-sub">Select all that apply.</p>
+          <div class="opt-grid" data-multi>
+            <button class="opt" aria-pressed="false" data-v="Fine lines"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>Fine lines &amp; wrinkles</button>
+            <button class="opt" aria-pressed="false" data-v="Texture & pores"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>Texture &amp; pores</button>
+            <button class="opt" aria-pressed="false" data-v="Pigmentation"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>Sun damage &amp; pigmentation</button>
+            <button class="opt" aria-pressed="false" data-v="Facial volume"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>Facial volume</button>
+            <button class="opt" aria-pressed="false" data-v="Skin laxity"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>Skin laxity</button>
+            <button class="opt" aria-pressed="false" data-v="Acne scars"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>Acne scars</button>
           </div>
         </div>
-        <div class="q-row">
-          <div class="q-label">Approximate budget</div>
-          <div class="q-opts">
-            <span class="pill">Under $300</span><span class="pill sel">$300–$600</span>
-            <span class="pill">$600–$1,000</span><span class="pill">$1,000+</span><span class="pill">Not sure</span>
+
+        <!-- step 2 -->
+        <div class="q-panel" data-step="2">
+          <h3>What's your comfort zone?</h3>
+          <p class="qh-sub">Budget and downtime help us match the right fit.</p>
+          <p class="q-label" style="font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-top:20px">Approximate budget</p>
+          <div class="opt-grid" data-single="budget">
+            <button class="opt radio" aria-pressed="false" data-v="Under $300"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>Under $300</button>
+            <button class="opt radio" aria-pressed="false" data-v="$300–$600"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>$300–$600</button>
+            <button class="opt radio" aria-pressed="false" data-v="$600–$1,000"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>$600–$1,000</button>
+            <button class="opt radio" aria-pressed="false" data-v="Not sure yet"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>Not sure yet</button>
+          </div>
+          <p class="q-label" style="font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-top:22px">Downtime you can take</p>
+          <div class="opt-grid" data-single="downtime">
+            <button class="opt radio" aria-pressed="false" data-v="None"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>None</button>
+            <button class="opt radio" aria-pressed="false" data-v="A few days"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>A few days</button>
           </div>
         </div>
-        <div class="q-row">
-          <div class="q-label">Downtime preference</div>
-          <div class="q-opts"><span class="pill sel">None</span><span class="pill">A few days</span><span class="pill">Flexible</span></div>
+
+        <!-- step 3 -->
+        <div class="q-panel" data-step="3">
+          <h3>Where should we look?</h3>
+          <p class="qh-sub">We only match providers you could realistically reach.</p>
+          <p class="q-label" style="font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-top:20px">Travel radius</p>
+          <div class="opt-grid" data-single="radius">
+            <button class="opt radio" aria-pressed="false" data-v="10 miles"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>Within 10 miles</button>
+            <button class="opt radio" aria-pressed="false" data-v="25 miles"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>Within 25 miles</button>
+            <button class="opt radio" aria-pressed="false" data-v="50 miles"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>Within 50 miles</button>
+          </div>
+          <input class="field" id="qZip" inputmode="numeric" maxlength="5" placeholder="ZIP code (optional)" aria-label="ZIP code">
         </div>
-        <div class="q-row">
-          <div class="q-label">Travel radius</div>
-          <div class="q-opts"><span class="pill">10 mi</span><span class="pill sel">25 mi</span><span class="pill">50 mi</span></div>
+
+        <!-- step 4 -->
+        <div class="q-panel" data-step="4">
+          <h3>Where should we send your matches?</h3>
+          <p class="qh-sub">Your shortlist and educational profile arrive here. No spam, ever.</p>
+          <input class="field" id="qName" placeholder="First name" aria-label="First name">
+          <div class="q-grid2">
+            <input class="field" id="qEmail" type="email" placeholder="Email" aria-label="Email">
+            <input class="field" id="qPhone" type="tel" placeholder="Phone (optional)" aria-label="Phone">
+          </div>
+          <p class="q-privacy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> We minimize what we collect. No medical history or photos at this step.</p>
+        </div>
+
+        <div class="q-err" id="qErr">Please make a selection to continue.</div>
+
+        <!-- result -->
+        <div class="q-result" id="qResult">
+          <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h3>You're matched.</h3>
+          <p id="qResultMsg">We've built your educational profile and a shortlist of suitable, credential-verified providers nearby.</p>
+          <div class="rcard" id="qResultCard"></div>
+          <div class="cta-row" style="justify-content:center;margin-top:22px">
+            <a class="btn btn-primary lg" id="qBook" href="#">Request your consultation</a>
+            <button class="btn btn-ghost lg" id="qRestart" type="button">Start over</button>
+          </div>
+          <p class="mc-note" style="margin-top:14px">Illustrative result · a real match reflects live provider data &amp; consent</p>
+        </div>
+
+        <div class="q-nav" id="qNav">
+          <button class="back" id="qBack" type="button" style="visibility:hidden"><span aria-hidden="true">←</span> Back</button>
+          <button class="btn btn-primary" id="qNext" type="button">Continue <span class="arw" aria-hidden="true">→</span></button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DIFFERENTIATION -->
-<section class="band alt" id="different">
+<!-- STATS -->
+<section class="band alt">
+  <div class="wrap">
+    <div class="sec-head c reveal">
+      <span class="eyebrow c">Why concern-first wins</span>
+      <h2>A better first step converts <em>better</em>.</h2>
+      <p class="sub">Illustrative targets that frame why the model works — real numbers come from the pilot.</p>
+    </div>
+    <div class="stats">
+      <div class="statc reveal"><b class="num" data-count="3" data-suffix="×">3×</b><span>more likely to act when you start with a goal, not a procedure</span></div>
+      <div class="statc reveal d1"><b class="num" data-count="70" data-suffix="%">70%</b><span>illustrative request-to-attendance rate in the sample funnel</span></div>
+      <div class="statc reveal d2"><b class="num" data-count="6" data-suffix="">6</b><span>suitability signals, before any paid placement</span></div>
+      <div class="statc reveal d3"><b>$0</b><span>cost to patients — the practice pays for results</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENTIATORS -->
+<section class="band" id="different">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">How this could differ from existing software</span>
+      <span class="eyebrow">What makes it different</span>
       <h2>Not another booking app. Three <em>deliberate</em> differentiators.</h2>
-      <p class="sub">Comparable capabilities exist across aesthetic booking, marketing, and imaging tools. The proposed edge is this particular combination — and the discipline behind it.</p>
+      <p class="sub">Comparable tools exist across booking, marketing, and imaging. The edge is the combination — and the discipline behind it.</p>
     </div>
     <div class="diffs">
       <div class="diff reveal">
         <span class="dic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 11h6M11 8v6"/></svg></span>
         <h3>Concern-first discovery</h3>
-        <p>A patient describes what bothers them rather than searching for a specific procedure. The platform translates goals into relevant consultations.</p>
+        <p>Patients describe what bothers them instead of searching a procedure. We translate goals into relevant consultations.</p>
       </div>
-      <div class="diff reveal">
+      <div class="diff reveal d1">
         <span class="dic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 7v5c0 4.5 3.5 7.5 8 9 4.5-1.5 8-4.5 8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg></span>
         <h3>Suitability, not popularity</h3>
-        <p>Credentials, relevant services, patient preferences, geographic proximity, and consultation availability influence matches.</p>
-        <span class="flag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg> Paid placement is disclosed, never disguised as clinical fit</span>
+        <p>Credentials, relevant services, preferences, proximity, and consult availability drive matches.</p>
+        <span class="flag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg> Paid placement disclosed, never disguised</span>
       </div>
-      <div class="diff reveal">
+      <div class="diff reveal d2">
         <span class="dic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9"/><path d="M3 4v5h5"/><path d="M12 7v5l3 2"/></svg></span>
         <h3>Closed-loop measurement</h3>
-        <p>Track the journey from first questionnaire to booked consultation, attended appointment, and completed treatment.</p>
-        <span class="flag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg> Only where privacy and consent permit</span>
+        <p>Track the journey from first questionnaire to booked consult, attended visit, and completed treatment.</p>
+        <span class="flag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg> Only where privacy &amp; consent permit</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PROFILE -->
-<section class="band" id="profile">
+<section class="band alt" id="profile">
   <div class="wrap">
-    <div class="split">
+    <div class="pgrid">
       <div class="reveal">
         <span class="eyebrow">Example provider profile</span>
         <h2 style="font-size:clamp(1.9rem,3.2vw,2.8rem);margin-top:14px">Found by concern — <span class="serif-it" style="color:var(--plum)">before</span> the patient knows a name.</h2>
-        <p class="sub" style="max-width:46ch">Someone interested in pores and fine lines could discover a practice through their concerns alone. A real profile would display independently verified credentials, applicable services, location, consultation details, and a booking request.</p>
-        <div class="q-note" style="margin-top:22px">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
-          <span>Any "verified" designation must be backed by an <b>actual</b> verification process.</span>
-        </div>
+        <p class="sub" style="max-width:46ch">Someone interested in pores and fine lines could discover a practice through their concerns alone. A real profile shows independently verified credentials, services, location, consult details, and a booking request.</p>
+        <div class="reason" style="margin-top:22px;font-size:.95rem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg> <span>Any "verified" designation must be backed by an <b>actual</b> verification process.</span></div>
       </div>
-      <div class="profile reveal">
+      <div class="profile reveal d1">
         <div class="p-banner">
           <div class="av">PT</div>
           <div class="pt"><b>Paige Thomas, NP</b><span>Howell, Michigan</span></div>
@@ -633,14 +848,11 @@ footer{border-top:1px solid var(--line);padding-block:48px;background:var(--pape
         <div class="p-body">
           <span class="p-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg> Illustrative example — not a live listing</span>
           <h4>Relevant consultation areas</h4>
-          <div class="svc">
-            <span>Skin rejuvenation</span><span>Fine lines</span><span>Texture concerns</span>
-            <span>Preventative aesthetics</span><span>Injectables</span><span>Microneedling</span><span>Laser services</span>
-          </div>
+          <div class="svc"><span>Skin rejuvenation</span><span>Fine lines</span><span>Texture</span><span>Preventative aesthetics</span><span>Injectables</span><span>Microneedling</span><span>Laser</span></div>
           <div class="p-meta">
             <div class="m"><b>Location</b><span>Howell, MI</span></div>
-            <div class="m"><b>Consultation</b><span>Request a visit</span></div>
-            <div class="m"><b>Credentials</b><span>Verified on profile</span></div>
+            <div class="m"><b>Consultation</b><span>By request</span></div>
+            <div class="m"><b>Credentials</b><span>Verified</span></div>
           </div>
         </div>
       </div>
@@ -648,157 +860,142 @@ footer{border-top:1px solid var(--line);padding-block:48px;background:var(--pape
   </div>
 </section>
 
-<!-- BUSINESS MODEL -->
-<section class="band alt" id="model">
+<!-- FOR PRACTICES -->
+<section class="band" id="practices">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">Potential business model</span>
-      <h2>Discovery stays <em>free</em>. Practices pay for measurable results.</h2>
-      <p class="sub">Test practice subscriptions at illustrative price points of $199–$399 per practice per month. Premium provider tools could add recurring revenue. Real pricing needs interviews and willingness-to-pay testing.</p>
+      <span class="eyebrow">For practices</span>
+      <h2>Patients who already <em>want</em> what you offer.</h2>
+      <p class="sub">Start with a practice-branded concern finder on your own site; grow into the broader marketplace as it builds. You see every step — and pay for measurable results.</p>
     </div>
-    <div class="split" style="margin-top:44px;align-items:start">
-      <div class="reveal">
-        <div class="metrics" style="margin-top:0;grid-template-columns:1fr 1fr">
-          <div class="metric"><b>$299<small>/mo</small></b><span>Illustrative mid-tier price per practice</span></div>
-          <div class="metric"><b>Free</b><span>Patient discovery, always</span></div>
+
+    <div class="pgrid" style="margin-top:48px">
+      <div class="dash reveal" aria-hidden="true">
+        <div class="dash-top"><span class="dots"><i></i><i></i><i></i></span><b>practice dashboard</b></div>
+        <div class="dash-body">
+          <div class="dash-kpis">
+            <div class="kpi"><b class="num">42</b><span>Consults attended</span><div class="up">▲ 18% MoM</div></div>
+            <div class="kpi"><b class="num">25</b><span>New patients</span><div class="up">▲ 12% MoM</div></div>
+            <div class="kpi"><b>$11.2k</b><span>Attributed revenue</span><div class="up">illustrative</div></div>
+          </div>
+          <div class="funnel" id="funnel" style="margin-top:18px">
+            <div class="fn"><div class="bw"><div class="bar" data-w="100">Visitors</div></div><div class="ct">1,000</div></div>
+            <div class="fn"><div class="bw"><div class="bar" data-w="30">Questionnaires</div></div><div class="ct">300</div></div>
+            <div class="fn"><div class="bw"><div class="bar" data-w="18">Requests</div></div><div class="ct">60</div></div>
+            <div class="fn"><div class="bw"><div class="bar" data-w="12">Attended</div></div><div class="ct">42</div></div>
+            <div class="fn"><div class="bw"><div class="bar" data-w="8">Patients</div></div><div class="ct">25</div></div>
+          </div>
         </div>
-        <p class="sub" style="font-size:.9rem;margin-top:22px;max-width:44ch">Avoid per-patient referral fees or treatment-revenue percentages without specialized healthcare legal review — including applicable Michigan rules and federal law.</p>
       </div>
-      <div class="reveal">
-        <div class="tbl-wrap">
-          <table>
-            <thead><tr><th>Paying practices</th><th class="num">Gross monthly subscription</th></tr></thead>
-            <tbody>
-              <tr><td class="num">10</td><td class="num">$2,990</td></tr>
-              <tr><td class="num">25</td><td class="num">$7,475</td></tr>
-              <tr><td class="num">50</td><td class="num">$14,950</td></tr>
-              <tr class="hl"><td class="num">100</td><td class="num">$29,900</td></tr>
-            </tbody>
-          </table>
+      <div class="reveal d1">
+        <div class="swap" style="gap:14px">
+          <div class="swap-row new"><span class="x" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span><div class="t"><b>Convert visitors who don't know what to ask for</b><span>The concern finder turns "just browsing" into a qualified consult request.</span></div></div>
+          <div class="swap-row new"><span class="x" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span><div class="t"><b>See the whole funnel</b><span>Questionnaire → request → attended → treated → rebooked. Measured, not guessed.</span></div></div>
+          <div class="swap-row new"><span class="x" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span><div class="t"><b>Capture leads from everywhere</b><span>Social, search, local partnerships, QR codes — all into one place.</span></div></div>
+          <div class="swap-row new"><span class="x" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span><div class="t"><b>Stay compliant</b><span>Privacy-by-design, disclosed placement, clinician-led decisions.</span></div></div>
         </div>
-        <p class="mc-note" style="margin-top:14px;font-family:var(--f-mono);font-size:.74rem;color:var(--faint)">At $299/practice. Excludes hosting, support, marketing, legal, taxes &amp; other operating costs.</p>
+      </div>
+    </div>
+
+    <!-- pricing -->
+    <div class="pricing" id="pilot">
+      <div class="tier reveal">
+        <h3>Embed</h3>
+        <div class="price">$199<small>/mo</small></div>
+        <p class="pdesc">The concern finder on your own site. Perfect first step.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Practice-branded questionnaire</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Consent-aware lead capture</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Basic conversion analytics</li>
+        </ul>
+        <a class="btn btn-soft" href="#cta">Start here</a>
+      </div>
+      <div class="tier feat reveal d1">
+        <span class="ftag">Most popular</span>
+        <h3>Grow</h3>
+        <div class="price">$299<small>/mo</small></div>
+        <p class="pdesc">Full matching, dashboard, and closed-loop measurement.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Everything in Embed</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Provider profile &amp; verification</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Full funnel dashboard</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Email/text follow-up</li>
+        </ul>
+        <a class="btn btn-primary" href="#cta">Partner with us</a>
+      </div>
+      <div class="tier reveal d2">
+        <h3>Scale</h3>
+        <div class="price">$399<small>/mo</small></div>
+        <p class="pdesc">Marketplace visibility and premium provider tools.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Everything in Grow</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Marketplace discovery</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Premium provider tools</li>
+        </ul>
+        <a class="btn btn-soft" href="#cta">Talk to us</a>
+      </div>
+    </div>
+    <p class="mc-note" style="text-align:center;margin-top:20px;font-family:var(--f-mono);font-size:.74rem;color:var(--faint)">Illustrative price points ($199–$399/mo). Real pricing requires interviews &amp; willingness-to-pay testing. No per-patient referral fees without healthcare legal review.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="band alt">
+  <div class="wrap">
+    <div class="sec-head c reveal">
+      <span class="eyebrow c">What people could say</span>
+      <h2>The experience, in <em>their</em> words.</h2>
+      <p class="sub">Illustrative voices that capture the intended experience — not real reviews.</p>
+    </div>
+    <div class="tgrid">
+      <div class="tcard reveal">
+        <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17l-6.2 3.6 1.6-6.7L2.2 9.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17l-6.2 3.6 1.6-6.7L2.2 9.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17l-6.2 3.6 1.6-6.7L2.2 9.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17l-6.2 3.6 1.6-6.7L2.2 9.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17l-6.2 3.6 1.6-6.7L2.2 9.9l6.9-.6z"/></svg></div>
+        <blockquote>"I had no idea what I needed. I just knew my skin looked tired. It matched me to someone who actually listened."</blockquote>
+        <div class="who"><span class="av">M</span><div><b>Maya R.</b><span>Patient · illustrative</span></div></div>
+      </div>
+      <div class="tcard reveal d1">
+        <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17l-6.2 3.6 1.6-6.7L2.2 9.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17l-6.2 3.6 1.6-6.7L2.2 9.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17l-6.2 3.6 1.6-6.7L2.2 9.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17l-6.2 3.6 1.6-6.7L2.2 9.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17l-6.2 3.6 1.6-6.7L2.2 9.9l6.9-.6z"/></svg></div>
+        <blockquote>"Finally, patients arrive knowing their goal — not demanding a procedure they saw online. Consults convert far better."</blockquote>
+        <div class="who"><span class="av">D</span><div><b>Dr. Lena P.</b><span>Practice owner · illustrative</span></div></div>
+      </div>
+      <div class="tcard reveal d2">
+        <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17l-6.2 3.6 1.6-6.7L2.2 9.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17l-6.2 3.6 1.6-6.7L2.2 9.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17l-6.2 3.6 1.6-6.7L2.2 9.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17l-6.2 3.6 1.6-6.7L2.2 9.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17l-6.2 3.6 1.6-6.7L2.2 9.9l6.9-.6z"/></svg></div>
+        <blockquote>"No pressure, no upsell. It felt like it was on my side — it told me who was verified and why they fit."</blockquote>
+        <div class="who"><span class="av">J</span><div><b>Jordan K.</b><span>Patient · illustrative</span></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PILOT FUNNEL -->
-<section class="band" id="pilot">
+<!-- FAQ -->
+<section class="band" id="faq">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Example 60-day local pilot</span>
-      <h2>A hypothetical funnel for <em>Livingston &amp; Oakland</em> counties.</h2>
-      <p class="sub">Start with a small number of practices and measure the whole journey. These are sample assumptions to pressure-test the model — not forecast conversion rates.</p>
+    <div class="sec-head c reveal">
+      <span class="eyebrow c">Questions</span>
+      <h2>Good to <em>know</em>.</h2>
     </div>
-    <div class="split" style="margin-top:44px;align-items:center">
-      <div class="reveal">
-        <div class="funnel" id="funnel">
-          <div class="fn"><div class="bar-wrap"><div class="bar" data-w="100">Website visitors</div></div><div class="count">1,000</div></div>
-          <div class="fn"><div class="bar-wrap"><div class="bar" data-w="30">Completed questionnaires</div></div><div class="count">300<small>30%</small></div></div>
-          <div class="fn"><div class="bar-wrap"><div class="bar" data-w="18">Consultation requests</div></div><div class="count">60<small>of visitors 6%</small></div></div>
-          <div class="fn"><div class="bar-wrap"><div class="bar" data-w="13">Attended consults</div></div><div class="count">42<small>70% of req.</small></div></div>
-          <div class="fn"><div class="bar-wrap"><div class="bar" data-w="8">Paying patients</div></div><div class="count">25<small>60% of seen</small></div></div>
-        </div>
-      </div>
-      <div class="reveal">
-        <div class="metric" style="padding:30px 28px">
-          <b class="grad-text">$11,250</b>
-          <span style="font-size:.98rem;margin-top:12px">Illustrative gross treatment revenue — 25 patients at a sample $450 average initial treatment, before acquisition, treatment, labor &amp; overhead.</span>
-        </div>
-        <p class="q-label" style="margin-top:24px">Core metrics to watch</p>
-        <div class="q-opts" style="margin-top:12px">
-          <span class="pill">Customer acquisition cost</span>
-          <span class="pill">Questionnaire completion</span>
-          <span class="pill">Request → attendance</span>
-          <span class="pill">Attendance → treatment</span>
-          <span class="pill">Initial contribution margin</span>
-          <span class="pill">Repeat-booking rate</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ROADMAP -->
-<section class="band alt" id="roadmap">
-  <div class="wrap">
-    <div class="sec-head reveal" style="margin-inline:auto;text-align:center">
-      <span class="eyebrow" style="justify-content:center">Development roadmap</span>
-      <h2>A staged path — <em>prototype</em> to pilot to scale.</h2>
-      <p class="sub" style="margin-inline:auto">Illustrative estimates, not commitments. A responsive website is a practical first release, well before any dedicated mobile app.</p>
-    </div>
-    <div class="road">
-      <div class="rp reveal"><span class="node"></span><span class="ph">Phase 01</span><h3>Prototype</h3><div class="tl">2–4 weeks</div><p>A clickable questionnaire with mock matches — enough to test the concept on the Howell practice's website.</p></div>
-      <div class="rp reveal"><span class="node"></span><span class="ph">Phase 02</span><h3>MVP</h3><div class="tl">2–4 months</div><p>Provider profiles, rules-based matching, lead capture, consultation request forms, and a practice dashboard.</p></div>
-      <div class="rp reveal"><span class="node"></span><span class="ph">Phase 03</span><h3>Local pilot</h3><div class="tl">1–3 months</div><p>Test with 5–10 practices and measure real conversions through the full funnel.</p></div>
-      <div class="rp reveal"><span class="node"></span><span class="ph">Phase 04</span><h3>Expansion</h3><div class="tl">6–12+ months</div><p>More locations, system integrations, and subscriptions — only after acquisition and retention repeat.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- RISKS -->
-<section class="band">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Key risks &amp; safeguards</span>
-      <h2>Built with the <em>hard parts</em> named up front.</h2>
-      <p class="sub">A concept is only as credible as its honesty about what could go wrong — and how it's handled.</p>
-    </div>
-    <div class="risks">
-      <div class="risk reveal">
-        <span class="ri" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span>
-        <div><h3>Two-sided marketplace</h3><p>Providers want demand; patients want choice. Start with a practice-branded tool that delivers value without needing marketplace scale.</p></div>
-      </div>
-      <div class="risk reveal">
-        <span class="ri" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
-        <div><h3>Privacy</h3><p>Determine whether HIPAA, FTC health-app rules, state privacy law, and BAAs apply to specific data flows. Minimize collection; protect data in transit and at rest.</p></div>
-      </div>
-      <div class="risk reveal">
-        <span class="ri" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/><path d="M12 8v4M12 16h.01"/></svg></span>
-        <div><h3>Clinical boundaries</h3><p>Never present matches as diagnoses, guarantee outcomes, or auto-recommend invasive procedures without appropriate clinical oversight.</p></div>
-      </div>
-      <div class="risk reveal">
-        <span class="ri" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3 4 7v5c0 4.5 3.5 7.5 8 9 4.5-1.5 8-4.5 8-9V7Z"/></svg></span>
-        <div><h3>Provider verification</h3><p>Validate licensure and credentials, and keep records current. The "verified" badge is only as good as the process behind it.</p></div>
-      </div>
-      <div class="risk reveal">
-        <span class="ri" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-6 0v4M5 9h14l1 12H4Z"/></svg></span>
-        <div><h3>Referral &amp; advertising rules</h3><p>Review fee-splitting, patient inducements, professional advertising, and sponsored-ranking disclosure before launch.</p></div>
-      </div>
-      <div class="risk reveal">
-        <span class="ri" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2Z"/></svg></span>
-        <div><h3>Demand generation</h3><p>The platform doesn't create traffic by itself. Budget for SEO, local partnerships, and marketing — and measure acquired patients, not clicks.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- NEXT STEPS -->
-<section class="band alt" id="next">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Recommended next steps</span>
-      <h2>Prove the <em>journey</em> before building the marketplace.</h2>
-    </div>
-    <div class="nsteps">
-      <div class="ns reveal"><p><b>Interview 10–15 practice owners</b> about lead generation, consultation conversion, and current software frustrations.</p></div>
-      <div class="ns reveal"><p><b>Build a clickable prototype</b> — the questionnaire and a provider-results screen.</p></div>
-      <div class="ns reveal"><p><b>Test it on the Howell practice website</b> and measure completion and booking requests.</p></div>
-      <div class="ns reveal"><p><b>Build a limited MVP</b> using privacy-by-design principles and legal review.</p></div>
-      <div class="ns reveal"><p><b>Recruit 5–10 pilot practices</b> and validate whether they'll pay for measurable results.</p></div>
-      <div class="ns reveal"><p><b>Expand geographically</b> only after repeatable acquisition and practice retention are demonstrated.</p></div>
+    <div class="faq">
+      <details class="qa reveal"><summary>Is this medical advice or a diagnosis?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="ans">No. Aesthetic Match produces an educational profile and a set of provider matches — never a diagnosis or an automated treatment plan. A licensed clinician determines what's appropriate for you.</div></details>
+      <details class="qa reveal"><summary>How much does it cost me?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="ans">Discovery and matching are free for patients. Practices pay a subscription for the tools and measurement — so recommendations are never pay-to-win disguised as clinical fit.</div></details>
+      <details class="qa reveal"><summary>What does "verified" actually mean?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="ans">In a real build, any "verified" badge is backed by an actual licensure and credential check, kept current — not a self-declared claim.</div></details>
+      <details class="qa reveal"><summary>How is my privacy handled?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="ans">Privacy-by-design: we minimize what we collect, and we don't ask for medical histories or facial photos up front. A production version would address applicable HIPAA, FTC health-app, and state privacy requirements before launch.</div></details>
+      <details class="qa reveal"><summary>Is paid placement a thing?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="ans">If it ever exists, it's disclosed distinctly and never disguised as clinical suitability. Matches are driven by credentials, services, preferences, and proximity first.</div></details>
+      <details class="qa reveal"><summary>Is this a live product?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="ans">This is a product concept by Alteva Digital, proposed for a pilot in the Howell, Michigan area. Figures, timelines, and profiles shown here are illustrative examples, not commitments.</div></details>
     </div>
   </div>
 </section>
 
 <!-- CLOSER -->
-<div class="closer reveal">
-  <span class="eyebrow">Central thesis</span>
-  <h2>Help patients find the right provider before they know which treatment to ask for.</h2>
-  <p>Prove that the matching journey generates incremental consultations and paying patients — then sell the proven workflow to practices.</p>
+<div class="closer reveal" id="cta">
+  <span class="eyebrow">Start with the concern</span>
+  <h2 class="for-patients">The right provider is a few taps away.</h2>
+  <h2 class="for-practices">Turn "just browsing" into booked consults.</h2>
+  <p class="for-patients">Describe what's bothering you and meet qualified, credential-verified providers who fit — free, in about a minute.</p>
+  <p class="for-practices">Add the concern finder to your site, measure the whole funnel, and grow with patients who already know their goal.</p>
   <div class="cta-row">
-    <a class="btn btn-light" href="#top">Revisit the concept <span class="arw" aria-hidden="true">→</span></a>
-    <a class="btn btn-outline" href="https://altevadigital.com" target="_blank" rel="noopener">Built by Alteva Digital</a>
+    <a class="btn btn-light lg for-patients" href="#match">Find my match <span class="arw" aria-hidden="true">→</span></a>
+    <a class="btn btn-light lg for-practices" href="#match">Request a demo <span class="arw" aria-hidden="true">→</span></a>
+    <a class="btn btn-outline lg" id="ctaCall" href="#">Call or text us</a>
   </div>
 </div>
 
@@ -807,121 +1004,184 @@ footer{border-top:1px solid var(--line);padding-block:48px;background:var(--pape
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="brand" href="#top">
-          <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z" fill="#fff"/></svg></span>
-          <span class="bt"><b>Aesthetic Match</b><span>Concept · Alteva Digital</span></span>
-        </a>
-        <p>A patient-facing discovery and consultation-matching concept for medical aesthetics, proposed for a pilot at a Howell, Michigan practice.</p>
+        <a class="brand" href="#top"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z" fill="#fff"/></svg></span><span class="bt"><b>Aesthetic Match</b><span>Concept · Alteva Digital</span></span></a>
+        <p>Patient-to-provider matching for medical aesthetics. Start with the concern, not the procedure.</p>
       </div>
-      <div class="foot-disc">
-        <b>Illustrative concept.</b> All figures, timelines, the example questionnaire, and the provider profile shown here are examples — not commitments, forecasts, or live listings. This page does not provide medical advice and makes no claim that no comparable product exists. Any real build would require legal, privacy, and clinical review before launch.
-      </div>
+      <div class="fcol"><h4>Patients</h4><a href="#match">Find my match</a><a href="#how">How it works</a><a href="#different">Why us</a><a href="#faq">FAQ</a></div>
+      <div class="fcol"><h4>Practices</h4><a href="#practices">For practices</a><a href="#pilot">Plans</a><a href="#profile">Provider profile</a><a href="#cta">Partner with us</a></div>
+    </div>
+    <div class="foot-disc">
+      <b>Illustrative concept.</b> All figures, timelines, pricing, testimonials, and the provider profile shown here are examples — not commitments, forecasts, live listings, or real reviews. This page does not provide medical advice and makes no claim that no comparable product exists. A real build would require legal, privacy, and clinical review before launch.
     </div>
     <div class="credit">
-      <span>© 2026 — a product concept, not a live service.</span>
+      <span>© 2026 Aesthetic Match — a product concept, not a live service.</span>
       <span>Designed &amp; developed by <a href="https://altevadigital.com" target="_blank" rel="noopener">Alteva Digital</a></span>
     </div>
   </div>
 </footer>
 
+<!-- STICKY MOBILE CTA -->
+<div class="mcta" aria-hidden="false">
+  <a class="btn btn-ghost for-patients" id="mCall" href="#">Call/Text</a>
+  <a class="btn btn-primary for-patients" href="#match">Find my match</a>
+  <a class="btn btn-ghost for-practices" href="#pilot">See plans</a>
+  <a class="btn btn-primary for-practices" href="#cta">Partner</a>
+</div>
+
 <script>
 (function(){
   "use strict";
-  var root=document.documentElement;
+  /* ===== CONFIG — swap these for real values (or send them to me) ===== */
+  var CONFIG = {
+    bookingUrl: "#match",            // TODO: real online booking URL
+    phone: "",                        // TODO: e.g. "+18105551234" (enables Call/Text)
+    leadEmail: "hello@aestheticmatch.co" // where the quiz emails leads (mailto stub)
+  };
+  /* =================================================================== */
+
+  var root=document.documentElement, body=document.body;
   var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* theme toggle */
-  var themeBtn=document.getElementById("themeBtn");
-  themeBtn.addEventListener("click",function(){
+  /* wire phone/booking */
+  (function wire(){
+    var tel = CONFIG.phone ? ("tel:"+CONFIG.phone) : null;
+    var sms = CONFIG.phone ? ("sms:"+CONFIG.phone) : null;
+    ["ctaCall","mCall"].forEach(function(id){var el=document.getElementById(id);if(el){ if(tel){el.href=tel;} else {el.style.display="none";}}});
+    var book=document.getElementById("qBook"); if(book) book.href=CONFIG.bookingUrl;
+  })();
+
+  /* theme toggle (persisted) */
+  try{var saved=localStorage.getItem("am-theme");if(saved)root.setAttribute("data-theme",saved);}catch(e){}
+  document.getElementById("themeBtn").addEventListener("click",function(){
     var cur=root.getAttribute("data-theme");
-    if(!cur){ // first toggle: flip relative to OS
-      cur=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
-    }
+    if(!cur)cur=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
     var next=cur==="dark"?"light":"dark";
     root.setAttribute("data-theme",next);
+    try{localStorage.setItem("am-theme",next);}catch(e){}
   });
+
+  /* audience toggle (all toggles stay in sync) */
+  function setAud(a){
+    body.setAttribute("data-aud",a);
+    [].forEach.call(document.querySelectorAll(".aud button"),function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-aud")===a));});
+  }
+  [].forEach.call(document.querySelectorAll(".aud button"),function(b){
+    b.addEventListener("click",function(){setAud(b.getAttribute("data-aud"));});
+  });
+
+  /* mobile drawer */
+  var drawer=document.getElementById("drawer");
+  function openDrawer(o){drawer.classList.toggle("open",o);body.classList.toggle("nav-open",o);drawer.setAttribute("aria-hidden",String(!o));document.getElementById("burger").setAttribute("aria-expanded",String(o));}
+  document.getElementById("burger").addEventListener("click",function(){openDrawer(true);});
+  document.getElementById("drawerClose").addEventListener("click",function(){openDrawer(false);});
+  [].forEach.call(drawer.querySelectorAll("[data-close]"),function(a){a.addEventListener("click",function(){openDrawer(false);});});
 
   /* scroll progress */
   var progress=document.getElementById("progress");
-  function onScroll(){
-    var h=document.documentElement;
-    var max=h.scrollHeight-h.clientHeight;
-    var p=max>0?h.scrollTop/max:0;
-    progress.style.transform="scaleX("+p+")";
-  }
+  function onScroll(){var h=root;var max=h.scrollHeight-h.clientHeight;progress.style.transform="scaleX("+(max>0?h.scrollTop/max:0)+")";}
   document.addEventListener("scroll",onScroll,{passive:true});onScroll();
 
-  /* reveal on scroll */
+  /* reveal + count-up + funnel */
   var revealEls=[].slice.call(document.querySelectorAll(".reveal"));
+  function countUp(el){
+    var target=parseFloat(el.getAttribute("data-count")), suf=el.getAttribute("data-suffix")||"";
+    if(reduce){el.textContent=target+suf;return;}
+    var start=0,dur=1100,t0=null;
+    function tick(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1);var v=Math.round((start+(target-start)*(1-Math.pow(1-p,3))));el.textContent=v+suf;if(p<1)requestAnimationFrame(tick);}
+    requestAnimationFrame(tick);
+  }
   if("IntersectionObserver" in window && !reduce){
-    var io=new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}
-      });
-    },{threshold:.12,rootMargin:"0px 0px -8% 0px"});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.12,rootMargin:"0px 0px -8% 0px"});
     revealEls.forEach(function(el){io.observe(el);});
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});},{threshold:.5});
+    [].forEach.call(document.querySelectorAll("[data-count]"),function(el){cio.observe(el);});
+    var funnel=document.getElementById("funnel");
+    if(funnel){var fio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){[].forEach.call(funnel.querySelectorAll(".bar"),function(b){b.style.width=b.getAttribute("data-w")+"%";});fio.disconnect();}});},{threshold:.3});fio.observe(funnel);}
   } else {
     revealEls.forEach(function(el){el.classList.add("in");});
+    [].forEach.call(document.querySelectorAll("[data-count]"),function(el){el.textContent=el.getAttribute("data-count")+(el.getAttribute("data-suffix")||"");});
+    var f2=document.getElementById("funnel");if(f2)[].forEach.call(f2.querySelectorAll(".bar"),function(b){b.style.width=b.getAttribute("data-w")+"%";});
   }
 
-  /* funnel bars animate when in view */
-  var funnel=document.getElementById("funnel");
-  function fillBars(){
-    [].forEach.call(funnel.querySelectorAll(".bar"),function(b){
-      b.style.width=b.getAttribute("data-w")+"%";
-    });
-  }
-  if(funnel){
-    if("IntersectionObserver" in window && !reduce){
-      var fio=new IntersectionObserver(function(entries){
-        entries.forEach(function(e){if(e.isIntersecting){fillBars();fio.disconnect();}});
-      },{threshold:.3});
-      fio.observe(funnel);
-    } else { fillBars(); }
-  }
-
-  /* concern finder demo */
+  /* ===== concern finder (hero) ===== */
   var REASONS={
-    lines:{s:"Preventative aesthetics &amp; injectables",t:"fine lines &amp; wrinkles"},
-    texture:{s:"Microneedling &amp; skin rejuvenation",t:"texture &amp; pores"},
-    pigment:{s:"Laser services &amp; skin rejuvenation",t:"sun damage &amp; pigmentation"},
-    volume:{s:"Injectables &amp; volume restoration",t:"facial volume"},
-    laxity:{s:"Skin-tightening &amp; laser services",t:"skin laxity"},
-    acne:{s:"Microneedling &amp; laser resurfacing",t:"acne scars"}
+    lines:{s:"Preventative aesthetics & injectables",t:"fine lines & wrinkles"},
+    texture:{s:"Microneedling & skin rejuvenation",t:"texture & pores"},
+    pigment:{s:"Laser services & skin rejuvenation",t:"sun damage & pigmentation"},
+    volume:{s:"Injectables & volume restoration",t:"facial volume"},
+    laxity:{s:"Skin-tightening & laser services",t:"skin laxity"},
+    acne:{s:"Microneedling & laser resurfacing",t:"acne scars"}
   };
-  var chips=document.getElementById("chips");
-  var card=document.getElementById("matchCard");
-  var empty=document.getElementById("matchEmpty");
-  var reasonsEl=document.getElementById("reasons");
-  var selected=[];
-
-  function iconMatch(){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';}
-
-  function render(){
-    if(selected.length===0){
-      card.classList.remove("on");empty.style.display="flex";return;
+  var chips=document.getElementById("chips"),card=document.getElementById("matchCard"),empty=document.getElementById("matchEmpty"),reasonsEl=document.getElementById("reasons");
+  var ringFill=document.getElementById("ringFill"),ringPct=document.getElementById("ringPct"),selected=[];
+  function chk(){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';}
+  function esc(s){return s.replace(/&/g,"&amp;");}
+  function renderFinder(){
+    var pct=Math.min(60+selected.length*13,99);
+    if(selected.length===0){pct=0;card.classList.remove("on");empty.style.display="flex";}
+    else{empty.style.display="none";card.classList.add("on");
+      var html="";selected.slice(0,3).forEach(function(c){var r=REASONS[c];html+='<div class="reason">'+chk()+'<div>Offers <b>'+esc(r.s)+'</b> for your '+esc(r.t)+'.</div></div>';});
+      html+='<div class="reason">'+chk()+'<div><b>Within your travel radius</b> — Howell, MI, 12 mi away.</div></div>';
+      html+='<div class="reason">'+chk()+'<div><b>Credentials verified</b>, with consult availability this week.</div></div>';
+      reasonsEl.innerHTML=html;
     }
-    empty.style.display="none";card.classList.add("on");
-    var html="";
-    // concern-driven reasons (max 3 shown)
-    selected.slice(0,3).forEach(function(c){
-      var r=REASONS[c];
-      html+='<div class="reason">'+iconMatch()+'<div>Offers <b>'+r.s+'</b> for your '+r.t+'.</div></div>';
-    });
-    // always-on suitability reasons
-    html+='<div class="reason">'+iconMatch()+'<div><b>Within your travel radius</b> — Howell, MI, 12 mi away.</div></div>';
-    html+='<div class="reason">'+iconMatch()+'<div><b>Credentials independently verified</b>, with consultation availability this week.</div></div>';
-    reasonsEl.innerHTML=html;
+    if(ringFill){ringFill.style.strokeDashoffset=String(126-(126*pct/100));ringPct.textContent=pct+"%";}
   }
+  chips.addEventListener("click",function(e){var btn=e.target.closest(".chip");if(!btn)return;var c=btn.getAttribute("data-c"),on=btn.getAttribute("aria-pressed")==="true";btn.setAttribute("aria-pressed",String(!on));if(on)selected=selected.filter(function(x){return x!==c;});else selected.push(c);renderFinder();});
 
-  chips.addEventListener("click",function(e){
-    var btn=e.target.closest(".chip");if(!btn)return;
-    var c=btn.getAttribute("data-c");
-    var on=btn.getAttribute("aria-pressed")==="true";
-    btn.setAttribute("aria-pressed",String(!on));
-    if(on){selected=selected.filter(function(x){return x!==c;});}
-    else{selected.push(c);}
-    render();
+  /* ===== multi-step quiz ===== */
+  var Q={concerns:[],budget:"",downtime:"",radius:"",zip:"",name:"",email:"",phone:""};
+  var step=1, TOTAL=4;
+  var panels=[].slice.call(document.querySelectorAll(".q-panel"));
+  var qFill=document.getElementById("qFill"),qCount=document.getElementById("qCount"),qBack=document.getElementById("qBack"),qNext=document.getElementById("qNext"),qErr=document.getElementById("qErr"),qNav=document.getElementById("qNav"),qResult=document.getElementById("qResult");
+
+  // multi-select (concerns)
+  document.querySelector('[data-multi]').addEventListener("click",function(e){var o=e.target.closest(".opt");if(!o)return;var on=o.getAttribute("aria-pressed")==="true";o.setAttribute("aria-pressed",String(!on));var v=o.getAttribute("data-v");if(on)Q.concerns=Q.concerns.filter(function(x){return x!==v;});else Q.concerns.push(v);qErr.classList.remove("on");});
+  // single-selects
+  [].forEach.call(document.querySelectorAll("[data-single]"),function(grp){var key=grp.getAttribute("data-single");grp.addEventListener("click",function(e){var o=e.target.closest(".opt");if(!o)return;[].forEach.call(grp.querySelectorAll(".opt"),function(x){x.setAttribute("aria-pressed","false");});o.setAttribute("aria-pressed","true");Q[key]=o.getAttribute("data-v");qErr.classList.remove("on");});});
+
+  function showStep(n){
+    panels.forEach(function(p){p.classList.toggle("on",+p.getAttribute("data-step")===n);});
+    qFill.style.width=(n/TOTAL*100)+"%";
+    qCount.textContent="Step "+n+" of "+TOTAL;
+    qBack.style.visibility=n>1?"visible":"hidden";
+    qNext.innerHTML=n===TOTAL?'See my matches <span class="arw" aria-hidden="true">→</span>':'Continue <span class="arw" aria-hidden="true">→</span>';
+    qErr.classList.remove("on");
+  }
+  function validate(){
+    if(step===1&&Q.concerns.length===0){qErr.textContent="Pick at least one concern to continue.";return false;}
+    if(step===2&&(!Q.budget||!Q.downtime)){qErr.textContent="Choose a budget and a downtime option.";return false;}
+    if(step===3&&!Q.radius){qErr.textContent="Pick how far you'd travel.";return false;}
+    if(step===4){Q.name=document.getElementById("qName").value.trim();Q.email=document.getElementById("qEmail").value.trim();Q.phone=document.getElementById("qPhone").value.trim();if(!Q.name||!/.+@.+\..+/.test(Q.email)){qErr.textContent="Add your first name and a valid email.";return false;}}
+    return true;
+  }
+  qBack.addEventListener("click",function(){if(step>1){step--;showStep(step);}});
+  qNext.addEventListener("click",function(){
+    if(!validate()){qErr.classList.add("on");return;}
+    if(step<TOTAL){step++;showStep(step);return;}
+    finish();
+  });
+  function finish(){
+    Q.zip=document.getElementById("qZip").value.trim();
+    panels.forEach(function(p){p.classList.remove("on");});
+    qNav.style.display="none";qErr.classList.remove("on");qFill.style.width="100%";qCount.textContent="Complete";
+    var concernTxt=Q.concerns.join(", ")||"your goals";
+    document.getElementById("qResultMsg").textContent="Based on "+concernTxt.toLowerCase()+", a "+Q.budget.toLowerCase()+" budget, and "+Q.radius+", here's an illustrative shortlist of suitable, credential-verified providers near you.";
+    document.getElementById("qResultCard").innerHTML=
+      '<div class="mc-top"><div class="avatar">PT</div><div class="who"><b>Paige Thomas, NP</b><span>Howell, MI · within '+Q.radius+'</span></div><span class="verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Verified</span></div>'+
+      '<div class="reason" style="margin-top:14px">'+chk()+'<div>Relevant to <b>'+esc(concernTxt)+'</b>, within your budget and travel radius.</div></div>';
+    qResult.classList.add("on");
+    // lead capture stub (mailto) — replace with real endpoint when wired
+    var body_=encodeURIComponent("New Aesthetic Match lead\n\nName: "+Q.name+"\nEmail: "+Q.email+"\nPhone: "+Q.phone+"\nConcerns: "+Q.concerns.join(", ")+"\nBudget: "+Q.budget+"\nDowntime: "+Q.downtime+"\nRadius: "+Q.radius+"\nZIP: "+Q.zip);
+    var book=document.getElementById("qBook");
+    book.href=CONFIG.phone?("tel:"+CONFIG.phone):(CONFIG.bookingUrl!=="#match"?CONFIG.bookingUrl:("mailto:"+CONFIG.leadEmail+"?subject=Consultation%20request&body="+body_));
+  }
+  document.getElementById("qRestart").addEventListener("click",function(){
+    Q={concerns:[],budget:"",downtime:"",radius:"",zip:"",name:"",email:"",phone:""};step=1;
+    [].forEach.call(document.querySelectorAll(".opt"),function(o){o.setAttribute("aria-pressed","false");});
+    ["qZip","qName","qEmail","qPhone"].forEach(function(id){document.getElementById(id).value="";});
+    qResult.classList.remove("on");qNav.style.display="flex";showStep(1);
+    document.getElementById("match").scrollIntoView({behavior:reduce?"auto":"smooth"});
   });
 })();
 </script>
